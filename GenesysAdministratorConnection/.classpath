@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/OSGi%Minimum-1.2"/>
+	<classpathentry kind="lib" path="javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="javax.xml.bind.jar"/>
+	<classpathentry kind="lib" path="jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="apptemplate.jar"/>
+	<classpathentry kind="lib" path="comappblock.jar"/>
+	<classpathentry kind="lib" path="commons.jar"/>
+	<classpathentry kind="lib" path="configurationprotocol.jar"/>
+	<classpathentry kind="lib" path="connection.jar"/>
+	<classpathentry kind="lib" path="contactsprotocol.jar"/>
+	<classpathentry kind="lib" path="kvlistbinding.jar"/>
+	<classpathentry kind="lib" path="kvlists.jar"/>
+	<classpathentry kind="lib" path="logging.jar"/>
+	<classpathentry kind="lib" path="managementprotocol.jar"/>
+	<classpathentry kind="lib" path="messagebrokerappblock.jar"/>
+	<classpathentry kind="lib" path="netty-3.6.5.Final.jar"/>
+	<classpathentry kind="lib" path="openmediaprotocol.jar"/>
+	<classpathentry kind="lib" path="outboundprotocol.jar"/>
+	<classpathentry kind="lib" path="protocol.jar"/>
+	<classpathentry kind="lib" path="protocolmanagerappblock.jar"/>
+	<classpathentry kind="lib" path="reportingprotocol.jar"/>
+	<classpathentry kind="lib" path="routingprotocol.jar"/>
+	<classpathentry kind="lib" path="switchpolicy.jar"/>
+	<classpathentry kind="lib" path="system.jar"/>
+	<classpathentry kind="lib" path="voiceprotocol.jar"/>
+	<classpathentry kind="lib" path="warmstandbyappblock.jar"/>
+	<classpathentry kind="lib" path="webmediaprotocol.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

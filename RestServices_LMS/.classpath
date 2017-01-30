@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="java-json.jar"/>
+	<classpathentry kind="lib" path="com.sun.jersey.jersey-core-1.4.0.jar"/>
+	<classpathentry kind="lib" path="javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="jersey-guava-2.7.jar"/>
+	<classpathentry kind="lib" path="jersey-client-2.0-m04.jar"/>
+	<classpathentry kind="lib" path="jersey-common-2.2-sources.jar"/>
+	<classpathentry kind="lib" path="hk2-api-2.2.0.jar"/>
+	<classpathentry kind="lib" path="org.apache.commons.httpclient.jar"/>
+	<classpathentry kind="lib" path="httpclient-4.3-beta1.jar"/>
+	<classpathentry kind="lib" path="org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="httpcore-4.3-beta1.jar"/>
+	<classpathentry kind="lib" path="cas-client-0.2.2.jar"/>
+	<classpathentry kind="lib" path="sso-client-0.2.jar"/>
+	<classpathentry kind="lib" path="abstract-https-test-client-0.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="enterprise.jar"/>
+	<classpathentry kind="lib" path="force-wsc-29.0.0.jar"/>
+	<classpathentry kind="lib" path="hk2-2.5.0-b09.jar"/>
+	<classpathentry kind="lib" path="httpcore-4.2-beta1.jar"/>
+	<classpathentry kind="lib" path="js-1.7R2.jar"/>
+	<classpathentry kind="lib" path="org.json.jar"/>
+	<classpathentry kind="lib" path="ST-4.0.7.jar"/>
+	<classpathentry kind="lib" path="wsc-22-jdk-1.7.jar"/>
+	<classpathentry kind="lib" path="wsc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

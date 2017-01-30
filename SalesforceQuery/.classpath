@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="wsc-22-jdk-1.7.jar"/>
+	<classpathentry kind="lib" path="force-wsc-29.0.0.jar"/>
+	<classpathentry kind="lib" path="js-1.7R2.jar"/>
+	<classpathentry kind="lib" path="ST-4.0.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="enterprise_16.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.capture.gtl.evo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getTaskByCaptureId>
+         <web:captureId>006290000035vdMAAQ</web:captureId>
+      </web:getTaskByCaptureId>
+   </soapenv:Body>
+</soapenv:Envelope>
