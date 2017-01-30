@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv">
+        <methods>
+          <include name="clickAgentScritping"/>
+          <include name="clickCaseInfo"/>
+        </methods>
+      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

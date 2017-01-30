@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>edu.apollogrp</groupId>
+  <artifactId>UCPSmokeTests</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+	<properties> 
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+		<skipTests>true</skipTests> 
+		 <suiteFolder>src\test\resources\edu\apollogrp\Testsuite\</suiteFolder> 
+		 <suiteFile>${SuiteFile}</suiteFile>
+	 </properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+				<skipTests>${skip.tests}</skipTests>
+					<suiteXmlFiles>
+			          <!-- Suite file injection parameter from command line -->
+			          <SuiteXmlFile>${suiteFolder}\${SuiteFile}</SuiteXmlFile>
+			       </suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin> <artifactId>maven-compiler-plugin</artifactId> 
+			<configuration> 
+				<encoding>iso-8859-1</encoding>
+				 <source>1.6</source> <target>1.6</target> 
+				 <parallel>methods</parallel> 
+				 <threadCount>1</threadCount> 
+			 </configuration> 
+			 </plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.2</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+	    </dependency>
+	    
+	  <dependency>
+        <groupId>com.microsoft.ews-java-api</groupId>
+        <artifactId>ews-java-api</artifactId>
+        <version>2.0</version>
+	 </dependency>
+		
+	
+		
+	    
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		
+ 		<dependency>
+			<groupId>edu.apollo.ui.ada.lib</groupId>
+			<artifactId>adacheckerlib</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency> 
+		
+		<!-- <dependency> <groupId>net.sourceforge.jexcelapi</groupId> <artifactId>jxl</artifactId> 
+			<version>2.6</version> </dependency> -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+
+	
+	   
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.5</version>
+		</dependency>
+		
+		  <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>2.53.1</version>
+    </dependency> 
+		
+	</dependencies>
+	
+	<repositories>
+
+		<repository>
+			<id>lp-public-releases</id>
+			<name>learningplatform-ci.apollogrp.edu-releases</name>
+			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>lp-public-snapshots</id>
+			<name>learningplatform-ci.apollogrp.edu-snapshots</name>
+			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>lp-third-party</id>
+			<name>learningplatform-ci.apollogrp.edu-thirdparty</name>
+			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/repositories/thirdparty</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>java-net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+				
+		<repository>
+			<id>sli4j-repository</id>
+			<name>sli4j Repository for Maven</name>
+			<url>http://sli4j.googlecode.com/svn/repo</url>
+		</repository>
+
+		<repository>
+		  <id>apollo-snapshot</id>
+		  <name>Apollo Group Artifactory - Snapshot</name>
+		  <url>http://artifactory.apollogrp.edu/artifactory/libs-snapshot-local</url>
+		</repository>
+
+	</repositories>
+
+
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+				
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories> 
+</project>

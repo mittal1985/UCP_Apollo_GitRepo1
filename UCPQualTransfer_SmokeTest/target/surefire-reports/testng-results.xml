@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="22" passed="22">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="4272815" started-at="2017-01-24T18:40:38Z" finished-at="2017-01-24T19:51:51Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="4272815" started-at="2017-01-24T18:40:38Z" finished-at="2017-01-24T19:51:51Z">
+      <class name="edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="setUp" duration-ms="9976" started-at="2017-01-24T11:40:38Z" finished-at="2017-01-24T11:40:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUpER()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="setUpER" duration-ms="14445" started-at="2017-01-24T11:40:48Z" finished-at="2017-01-24T11:41:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpER -->
+        <test-method status="PASS" signature="clickUserNameER()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickUserNameER" duration-ms="295" started-at="2017-01-24T11:41:03Z" finished-at="2017-01-24T11:41:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickUserNameER -->
+        <test-method status="PASS" signature="clickPasswordER()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickPasswordER" duration-ms="362" started-at="2017-01-24T11:41:03Z" finished-at="2017-01-24T11:41:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickPasswordER -->
+        <test-method status="PASS" signature="clickSubmitER()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickSubmitER" duration-ms="13666" started-at="2017-01-24T11:41:03Z" finished-at="2017-01-24T11:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSubmitER -->
+        <test-method status="PASS" signature="clickUserName()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickUserName" duration-ms="276" started-at="2017-01-24T11:41:17Z" finished-at="2017-01-24T11:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickUserName -->
+        <test-method status="PASS" signature="clickPassword()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickPassword" duration-ms="237" started-at="2017-01-24T11:41:17Z" finished-at="2017-01-24T11:41:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickPassword -->
+        <test-method status="PASS" signature="clickSubmit()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickSubmit" duration-ms="183" started-at="2017-01-24T11:41:18Z" finished-at="2017-01-24T11:41:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSubmit -->
+        <test-method status="PASS" signature="getCall()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="getCall" duration-ms="304443" started-at="2017-01-24T11:41:18Z" finished-at="2017-01-24T11:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCall -->
+        <test-method status="PASS" signature="clickCaseInfo()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickCaseInfo" duration-ms="338" started-at="2017-01-24T11:46:22Z" finished-at="2017-01-24T11:46:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCaseInfo -->
+        <test-method status="PASS" signature="clickAgentScritping()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickAgentScritping" duration-ms="834" started-at="2017-01-24T11:46:23Z" finished-at="2017-01-24T11:46:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAgentScritping -->
+        <test-method status="PASS" signature="clickNameSearch()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickNameSearch" duration-ms="8856" started-at="2017-01-24T11:46:23Z" finished-at="2017-01-24T11:46:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickNameSearch -->
+        <test-method status="PASS" signature="clickFirstRecord()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickFirstRecord" duration-ms="3008156" started-at="2017-01-24T11:46:32Z" finished-at="2017-01-24T12:36:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickFirstRecord -->
+        <test-method status="PASS" signature="clickQualify()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickQualify" duration-ms="902640" started-at="2017-01-24T12:36:40Z" finished-at="2017-01-24T12:51:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickQualify -->
+        <test-method status="PASS" signature="clickStartTransferButton()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickStartTransferButton" duration-ms="1003" started-at="2017-01-24T12:51:43Z" finished-at="2017-01-24T12:51:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickStartTransferButton -->
+        <test-method status="PASS" signature="clickTransferDropdown()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickTransferDropdown" duration-ms="1002" started-at="2017-01-24T12:51:44Z" finished-at="2017-01-24T12:51:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTransferDropdown -->
+        <test-method status="PASS" signature="clickConsultButton()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickConsultButton" duration-ms="1003" started-at="2017-01-24T12:51:45Z" finished-at="2017-01-24T12:51:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickConsultButton -->
+        <test-method status="PASS" signature="clickSearchMyFavButton()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickSearchMyFavButton" duration-ms="1003" started-at="2017-01-24T12:51:46Z" finished-at="2017-01-24T12:51:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSearchMyFavButton -->
+        <test-method status="PASS" signature="clickEnrollmentqualtransfer()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickEnrollmentqualtransfer" duration-ms="1003" started-at="2017-01-24T12:51:47Z" finished-at="2017-01-24T12:51:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickEnrollmentqualtransfer -->
+        <test-method status="PASS" signature="clickInstantCallTransfer()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickInstantCallTransfer" duration-ms="1002" started-at="2017-01-24T12:51:48Z" finished-at="2017-01-24T12:51:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickInstantCallTransfer -->
+        <test-method status="PASS" signature="clickInstantCallConference()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="clickInstantCallConference" duration-ms="1003" started-at="2017-01-24T12:51:49Z" finished-at="2017-01-24T12:51:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickInstantCallConference -->
+        <test-method status="PASS" signature="getCallER()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv@6b2fad11]" name="getCallER" duration-ms="1064" started-at="2017-01-24T12:51:50Z" finished-at="2017-01-24T12:51:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCallER -->
+      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.QualTransfer_AgentScript_QAEnv -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

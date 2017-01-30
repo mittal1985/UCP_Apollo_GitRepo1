@@ -1,0 +1,491 @@
+package edu.apollogrp.tests.UCPSmokeTests;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.TimeZone;
+
+import javax.mail.MessagingException;
+
+import microsoft.exchange.webservices.data.core.ExchangeService;
+import microsoft.exchange.webservices.data.core.enumeration.misc.ExchangeVersion;
+import microsoft.exchange.webservices.data.core.service.item.EmailMessage;
+import microsoft.exchange.webservices.data.credential.ExchangeCredentials;
+import microsoft.exchange.webservices.data.credential.WebCredentials;
+import microsoft.exchange.webservices.data.property.complex.MessageBody;
+
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.HtmlEmail;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+import edu.apollogrp.logger.Logger;
+
+public class QualTransfers_EmailReport {
+
+
+@Test(groups={"sanity"})
+public void resultFPMSanity()
+	{
+	
+	//String browser = "FF";
+	//String suite = "sanity";
+	FirefoxDriver driver = new FirefoxDriver();
+   // if(suite.equalsIgnoreCase("sanity"))
+	//{
+    	driver.get("http://10.96.13.201:8080/job/FPM-SANITY/");
+//	} else{
+    	//driver.get("http://10.96.13.201:8080/view/FPM/job/FPM-FE-Regression/");
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	//} 
+		
+   
+    String build = driver.findElement(By.xpath("//*[@id='buildHistory']/div[2]//tr[1]/td/div[1]//*[@update-parent-class='.build-row']")).getText();
+    String build1 = build.trim();
+    String build2 = build1.substring(1);
+    String appUrl = "https://portal.qaols.phoenix.edu";
+    Logger.info("Build number = "+build2);
+	
+	try {
+		String env = "";
+		String[] envUrl = {
+				"http://10.96.13.201:8080/job/FPM-SANITY/ws/FinancialPlan/target/surefire-reports/emailable-report.html",
+				
+		};
+
+		String source = "";
+		StringBuffer stringBuf = new StringBuffer(); 
+		stringBuf.append("<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>TestNG:  Unit Test</title><style type=\"text/css\">table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {border:1px solid #000099;padding:.25em .5em .25em .5em}table.param th {vertical-align:bottom}td.numi,th.numi,td.numi_attn {text-align:right}tr.total td {font-weight:bold}table caption {text-align:center;font-weight:bold;}table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}table.passed td,table tr.passedeven td {background-color: #33FF33;}table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}table.passed td,table tr.skippedodd td {background-color: #dddddd;}table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}tr.stripe td,tr.stripe th {background-color: #E6EBF9;}p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}div.shootout {padding:2em;border:3px #4854A8 solid}</style></head><body>");
+
+
+		stringBuf.append("Hi All,");
+		stringBuf.append("<p>Please find the report for FPM FE Sanity.</p>");
+		
+		int[] count = getSumOfArrays(envUrl);
+		stringBuf.append(drawPieChart(count[1],count[2],count[3]));
+		stringBuf.append(getEnvironmentDetails(build2, appUrl, browser));
+		stringBuf.append(resultTable());
+
+		stringBuf.append("</body></html>"); 
+					
+		String body1="";
+		int size1;
+		driver.get("http://10.96.13.201:8080/job/FPM-SANITY/edu.apollogrp$FinancialPlan/"+build2+"/testReport/edu.apollogrp.tests.financialPlan/FPMSanityTests/");
+		
+		size1 = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr")).size();
+		for(int i =1;i<=size1;i++)
+		{			
+			String TestCase = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+i+"]/td[1]/a")).getText();
+			String mark = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+i+"]/td[3]")).getText();
+			if(mark.equalsIgnoreCase("Passed")||mark.equalsIgnoreCase("Fixed")) {	         	 
+         	  mark = "<font color='green'>Pass</font>";
+            }
+			if(mark.equalsIgnoreCase("Failed")||mark.equalsIgnoreCase("Regression")) {
+               mark = "<font color='red'>Fail</font>";
+            }
+			String ts = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+i+"]/td[2]")).getText();
+			body1 = body1 + "<tr><td>"+i+"</td><td>"+TestCase+"</td><td>"+mark+"</td><td>"+ts+"</td>"+"</tr>";
+		}
+		String  link = "<center><a href='http://10.96.13.201:8080/job/FPM-SANITY/edu.apollogrp$FinancialPlan/"+build2+"/testReport/edu.apollogrp.tests.financialPlan/FPMSanityTests/'>FPM sanity tests report link</a></center>";
+		stringBuf.append( "<center><h4>FPM Sanity Tests </h4></center> "
+				+link
+				+"<table BORDER='1'  WIDTH='40%' align='middle'   CELLPADDING='2' CELLSPACING='1' ><font size='3'>"					
+				+ "<tr bgcolor='99CCFF'><td>S.No</td><td>TestCase</td><td>Result</td><td>Time</td></tr>"
+				+ body1	
+				+"</table>");
+		
+		stringBuf.append("</body></html>"); 
+		source = stringBuf.toString();
+		////System.out.println(source);
+
+		driver.close();
+		sendEmail(source,env+"QA FPM FE SANITY REPORT - "+generateDateFormat());
+
+
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+	
+	public void sendEmail(String source,String subject) throws Exception {
+		if(source.equals("")){
+			//////System.out.println("Email will not send as there are parsing errors");
+		}else{
+						
+			String to = "DGC-APO-Corporate-LPQA-SSProjects@apollo.edu,FinancialPlanManagementScrumTeam@apollo.edu,FinancialPlanManagementDEVTeam@apollo.edu";
+		
+		    ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
+
+            ExchangeCredentials credentials = new WebCredentials("vigneswara.ph@phoenix.edu", "4rfvVFR$");
+            service.setCredentials(credentials);
+            service.setUrl(new URI("https://outlook.office365.com/EWS/Exchange.asmx"));
+
+            EmailMessage msg = new EmailMessage(service);
+            msg.setSubject(subject);
+            msg.setBody(MessageBody.getMessageBodyFromText(source.toString()));
+            List<String> toAddressList = Arrays.asList(to.split("\\s*,\\s*"));
+            Iterator<String> mailList = toAddressList.iterator();
+
+            msg.getToRecipients().addSmtpAddressRange(mailList);
+          
+            msg.send();
+					
+			System.out.println("\nMail was sent successfully.");
+
+
+		}
+	}
+
+	public String generateDateFormat(){
+
+		 Calendar instance = Calendar.getInstance();
+		 Date date = instance.getTime();
+		 DateFormat formatter= new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");	
+		 formatter.setTimeZone(TimeZone.getTimeZone("MST"));
+		 String s = formatter.format(date);
+		 return s;
+
+	}
+
+
+
+
+	public String parseHtmlSource(String reportURL) throws IOException, URISyntaxException{
+		FirefoxDriver driver = new FirefoxDriver();
+		driver.get(reportURL);
+		String str= driver.getPageSource(); 
+		driver.close();
+		return str.toString();
+	}
+
+	public String getEnvironmentDetails(String build, String appUrl, String browserType) throws IOException, URISyntaxException{
+		StringBuffer sb = new StringBuffer();
+		
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+
+		sb.append("<table BORDER='2'   WIDTH='40%' align='middle'  CELLPADDING='2' CELLSPACING='1'> ");
+		sb.append("<th bgcolor='#5D7B9D'  colspan=2><font color='#fff' size=3> Environment Details </font></th>");
+		
+		sb.append("<tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>APPICATION URL </font>	</td><td align='center' size=2> <a href="+ appUrl + "> " + appUrl + "</a></td></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>BUILD NUMBER </td><td  align='center' size=2>  "
+				+ build + " </td> </font></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>BROWSER TESTED </td><td  align='center' size=2>  "
+				+ "Google Chrome 54.0.2840" + "</td> </font></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>DATE OF EXECUTION  </td><td  align='center' size=2>  "
+				+ new Date() + " </td> </font></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>FPM VERSION  </td><td  align='center' size=2>  "
+				+" 16.4" + " </td> </font></tr>");
+
+		sb.append("</table>");
+
+		return sb.toString();
+
+	}
+	
+	public String resultTable() throws Exception, URISyntaxException{
+		
+		
+		StringBuffer sb = new StringBuffer();
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		FirefoxDriver driver = new FirefoxDriver();
+		driver.get("http://10.96.13.201:8080/job/FPM-SANITY/");
+		Thread.sleep(2500);
+		String build = driver.findElement(By.xpath("//*[@id='buildHistory']/div[2]//tr[1]/td/div[1]//*[@update-parent-class='.build-row']")).getText();
+	    String build1 = build.trim();
+	    String build2 = build1.substring(1);
+	    Logger.info("Build number = "+build2);
+		driver.get("http://10.96.13.201:8080/job/FPM-SANITY/edu.apollogrp$FinancialPlan/"+build2+"/testReport/edu.apollogrp.tests.financialPlan/");
+		
+		
+		
+		
+		String header = "<tr bgcolor='99CCFF'><TH ALIGN='CENTER'>Test class</TH><TH ALIGN='CENTER'>Total </TH><TH ALIGN='CENTER' bgcolor='66FF33'>Passed</TH><TH ALIGN='CENTER' bgcolor='FF3333'>Failed</TH><TH ALIGN='CENTER' bgcolor='FFFF33'>Skipped</TH><TH ALIGN='CENTER'>Duration</TH></tr>";
+		
+		String body = "";
+		int allTotal = 0;
+		int allPassed = 0;
+		int allFailed = 0;
+		int allSkipped = 0;
+		
+		String totalDuration = driver.findElement(By.xpath("//*[@id='main-panel-content']/div[2]/a")).getText();
+		totalDuration = totalDuration.replaceAll("Took ", "");
+		
+		for(int k=1;k<=1;k++)
+		{
+			String TestClass  = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[1]/a/span")).getText();
+			String Total 	  = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[9]")).getText();
+			String Passed     = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[7]")).getText();
+			String Failed     = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[3]")).getText();
+			String Skipped    = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[5]")).getText();
+			String Time       = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[2]")).getText();
+			body = body + "<b><tr ><td >"+TestClass+"</td><td ALIGN='CENTER'>"+Total+"</td><td ALIGN='CENTER'>"+Passed+"</td><td ALIGN='CENTER'>"+Failed+"</td><td ALIGN='CENTER'>"+Skipped+"</td><td ALIGN='CENTER'>"+Time+"</td>"+"</tr></b>";
+		
+			allTotal     = allTotal+ Integer.parseInt(Total);
+			allPassed    = allPassed+ Integer.parseInt(Passed);
+			allFailed    = allFailed+ Integer.parseInt(Failed);
+			allSkipped   = allSkipped+ Integer.parseInt(Skipped);
+		
+		}
+		
+		//body = body + "<tr bgcolor='#FFDAB9'><b><td >"+""+"</td><td ALIGN='CENTER'>"+allTotal+"</td><td ALIGN='CENTER'>"+allPassed+"</td><td ALIGN='CENTER'>"+allFailed+"</td><td ALIGN='CENTER'>"+allSkipped+"</td><td ALIGN='CENTER'>"+totalDuration+"</td>"+"</b></tr>";
+		
+		sb.append("<table BORDER='2'   WIDTH='40%' align='middle'  CELLPADDING='2' CELLSPACING='1'> ");
+		sb.append("<th bgcolor='#5D7B9D'  colspan=6><font color='#fff' size=3> Detailed report table </font></th>");
+		
+		sb.append(header);
+		sb.append(body);
+		sb.append("</table>");
+		
+		driver.close();
+
+		return sb.toString();
+
+	}
+
+	public String getTableDetails(String pagesource) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+
+		String strTemp=pagesource.split("</table>")[1];
+
+		int index = strTemp.indexOf("<table cellspacing=\"0\" cellpadding=\"0\" class=\"param\">");
+		if(index==-1){
+			strTemp=pagesource.split("</table>")[0];
+			index = strTemp.indexOf("<table cellspacing=\"0\" cellpadding=\"0\" class=\"param\">");
+		}
+		strTemp = strTemp.substring(index);
+
+		strBuf.append(strTemp);
+		strBuf.append("</table>");
+
+		return strBuf.toString();
+
+	}
+
+	public String getTableHeaderDetails(String tableSource) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+		String[] strTemp=tableSource.split("</tr>");
+		strBuf.append(strTemp[0].replace("\\s", "").replace("\n", ""));
+		strBuf.append("</tr>");
+		String source = strBuf.toString();
+
+		String[] strTemp2=source.split("</th>");
+		String total = "<th class=\"numi\"># Total</th>";
+
+
+		//return source.replaceAll("Included", "Report Link").replaceAll("Groups", "").replaceAll("Excluded","Owner");
+		return source;
+
+	}
+
+	public String getTableRowDetails(String url,String tableSource) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+		String[] strTemp=tableSource.split("</tr>");
+
+		System.out.println("strTemp "+strTemp.length);
+		if(strTemp.length==3){
+			for(int i=1;i<=strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[6] = strTemp2[6].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				String strTemp3 = "<a href=\""+url+"\">Link</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[6], strTemp3);
+							
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+			}
+		}else{
+			for(int i=1;i<strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[6] = strTemp2[6].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				String strTemp3 = "<a href=\""+url+"\">Link</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[6], strTemp3);
+				
+				String strTemp4 = "<a >vph</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[7], strTemp3);
+				
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+				////////System.out.println(strBuf);
+				//strBuf.delete(strTemp[5].indexOf("<tr>"), strTemp[7].indexOf("</tr>"));
+			}
+			
+			
+		}
+
+
+		return strBuf.toString();
+
+	}
+	
+	public String getTableRowDetails1(String url,String tableSource) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+		String[] strTemp=tableSource.split("</tr>");
+
+		System.out.println("strTemp "+strTemp.length);
+		if(strTemp.length==3){
+			for(int i=1;i<=strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[6] = strTemp2[6].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				//String strTemp3 = "<a href=\""+url+"\">Link</a";
+				String strTemp3 ="<a >vph</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[6], strTemp3);
+							
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+			}
+		}else{
+			for(int i=1;i<6;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+			//	strTemp2[7] = strTemp2[7].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				String strTemp3 ="vph";
+				strTemp[i] = strTemp[i].replace(strTemp2[7], strTemp3);
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+				////////System.out.println(strBuf);
+				//strBuf.delete(strTemp[5].indexOf("<tr>"), strTemp[5].indexOf("</tr>"));
+			}
+			
+			
+		}
+
+
+		return strBuf.toString();
+
+	}
+	
+
+	public String getTableRowDetails(String url,String tableSource, String suite, String build2) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+		String[] strTemp=tableSource.split("</tr>");
+		
+		 
+	        String url1 = "http://10.96.52.54:8080/view/FPM/job/fima-regression/"+build2+"/edu.apollogrp$FinancialPlan/testReport/edu.apollogrp.tests.financialPlan/";
+	       
+		if(strTemp.length==3){
+			for(int i=1;i<=strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[6] = strTemp2[6].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				String strTemp3 = "<a href=\""+url1+"\">Link</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[6], strTemp3);
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+			}
+		}else{
+			/*for(int i=1;i<strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[6] = strTemp2[6].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+				String strTemp3 = "<a href=\""+url1+"\">Link</a";
+				strTemp[i] = strTemp[i].replace(strTemp2[6], strTemp3);				
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+				}*/
+			
+			for(int i=1;i<strTemp.length-2;i++){
+				String[] strTemp2 = strTemp[i].split("</td>");
+				strTemp2[7] = strTemp2[7].replace("<td class=\"numi\">", "").replaceAll("\n", "").trim();
+			
+				String strTemp4 ="";
+				strTemp[i] = strTemp[i].replace(strTemp2[7], strTemp4);
+				strBuf.append(strTemp[i]);
+				strBuf.append("</tr>");
+
+				////////System.out.println(strBuf);
+				//strBuf.delete(strTemp[5].indexOf("<tr>"), strTemp[5].indexOf("</tr>"));
+			}
+			
+			
+		}
+
+
+		return strBuf.toString();
+
+	}
+
+
+	public String getTableFooterDetails(String tableSource) throws IOException, URISyntaxException{
+		StringBuffer strBuf = new StringBuffer();
+		String[] strTemp=tableSource.split("</tr>");
+
+		//////System.out.println(strTemp);
+
+		strBuf.append(strTemp[strTemp.length-2]);
+		strBuf.append("</tr>");
+
+		return strBuf.toString();
+
+	}
+
+
+	public int[] getPassFailSkipCount(String tableFooterSource){
+		int[] count = {0,0,0,0};
+		String[] strTemp=tableFooterSource.split("</td>");
+		for(int i=1;i<=4;i++){
+			count[i-1] = Integer.parseInt(strTemp[i].replaceAll("<td class=\"numi\">", "").replaceAll("<td class=\"numi_attn\">", "").replaceAll("\\s", "").trim());
+		}
+		return count;	
+	}
+
+	public int[] getSumOfArrays(String[] envUrl) throws IOException, URISyntaxException {
+		int[] sumArr = new int[4];
+		int[] tempArray = new int[4];
+		for(int i=0;i<envUrl.length;i++){
+			//System.out.println(envUrl[i]);
+			tempArray =getPassFailSkipCount(getTableFooterDetails(getTableDetails(this.parseHtmlSource(envUrl[i])))); 
+			for(int j=0;j<4;j++){
+				sumArr[j] = sumArr[j]+tempArray[j];
+			}
+		}
+		return sumArr;
+	}
+
+	public String getTableFooter(int[] count) {
+		String source = "<tr class=\"total\"><td>Total</td><td class=\"numi\">PASS</td><td class=\"numi\">SCENARIO</td><td class=\"numi\">SKIP</td><td class=\"numi\">FAIL</td><td class=\"numi\"></td><td colspan=\"2\"></td></tr></tbody></table>";
+
+		source = source.replace("PASS", String.valueOf(count[0])).replace("SCENARIO", String.valueOf(count[1])).replace("SKIP", String.valueOf(count[2])).replace("FAIL", String.valueOf(count[3]));
+
+		return source;
+	}
+
+	public String drawPieChart(int passi, int skipi, int faili)  {
+		int total = passi+skipi+faili; 
+		String pass=Integer.toString(passi*100/total);
+		String skip=Integer.toString(skipi*100/total);
+		String fail=Integer.toString(faili*100/total);
+
+
+		String alt="\" alt=";
+		String googlepiechart="\"Google Chart";
+		String icon="\"/></center>";    
+		String urlimg="\"http://chart.apis.google.com/chart?";
+		String img="<center><img src="+urlimg+"chtt=Pie+Chart&amp;chts=000000,12&amp;chs=300x150&amp;chf=bg,s,ffffff&amp;cht=p3&amp;chd=t:passtest,failtest,skiptest&amp;chl=Passed|Failed|Skipped&amp;chco=006600,ff0000,ffff00"+alt+googlepiechart+icon; 
+		img=img.replaceAll("passtest", pass);
+		img=img.replaceAll("failtest", fail);
+		img=img.replaceAll("skiptest", skip);
+		return img;
+	}
+
+	}
