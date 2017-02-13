@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.poi.ss.usermodel.Cell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import com.apollo.googlehangout.GoogleHangout_NoVoice;
 import com.apollo.reportgeneration.Generic_Functions;
 import com.apollo.reportgeneration.HtmlReport;
 
@@ -24,7 +24,7 @@ public class QualTransfer_AgentScript_QAEnv {
 //4807548519
 	WebDriver driver = null;
 	WebDriver driverER = null;
-	Cell cell = null;
+	//Cell cell = null;
 	public static HtmlReport currentSuit = new HtmlReport();
 	public String folder;
 	public String screen_Header;
@@ -32,6 +32,7 @@ public class QualTransfer_AgentScript_QAEnv {
 	public String proj_Name_Final;
 	BufferedWriter bw = null;
 	FileWriter fw = null;
+	public String phoneNumber="4807548519";
 	
 	public void QualTransferPage() {
 		try{
@@ -74,7 +75,7 @@ public class QualTransfer_AgentScript_QAEnv {
 		//driver.get("http://dlaxucww001.devapollogrp.edu:8080/ui/ad/v1/index.html");
 		
 		//driver.get("http://qlaxucww001.qaapollogrp.edu:8080/ui/ad/v1/index.html");
-		driver.get("http://genesyswwe.qaapollogrp.edu:8080/ui/ad/v1/index.html ");
+		driver.get("http://genesyswwe.qaapollogrp.edu:8080/ui/ad/v1/index.html");
 		driver.manage().window().maximize();
 	}
 	
@@ -270,6 +271,9 @@ public class QualTransfer_AgentScript_QAEnv {
 	@Test(priority=8)
 	public void getCall(){
 		try{
+			
+			GoogleHangout_NoVoice googleHangout= new GoogleHangout_NoVoice();
+			googleHangout.setUp(phoneNumber);
 		int count = 0;
 		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("agent-desktop-container-title"))));
 		while(webElement==null){
@@ -389,10 +393,10 @@ public class QualTransfer_AgentScript_QAEnv {
 					driver.switchTo().frame(driver.findElement(By.className("wwe-web-extension-iframe")));
 					
 					WebElement firstNameElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("firstnamesearch"))));
-					firstNameElement.sendKeys("Anand");
+					firstNameElement.sendKeys("uop");
 					
 					WebElement lastNameElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("lastnamesearch"))));
-					lastNameElement.sendKeys("Nair");
+					lastNameElement.sendKeys("phoenix.11");
 			
 	
 					Thread.sleep(4000);
@@ -642,26 +646,102 @@ public class QualTransfer_AgentScript_QAEnv {
 		
 		}
 		
+		
+		
+		
+		
 		@Test(priority=21)
-		public void getCallER(){
+		public void endACCCall(){
 			try{
 			int count = 0;
-			WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-end-call"))));
+			WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-end-call"))));
 			while(webElement==null){
 				count = count++;
-				driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			}
-		System.out.println("going to click end button on ER side");
+		System.out.println("going to click end button on ACC side");
 		
 		if(webElement!=null){
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
+			//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
+			webElement.click();
 			}
-		webElement.click();
+		
 		
 		
 	}catch(Exception exception){
 			exception.printStackTrace();
 		}
 	}
+		
+		@Test(priority=22)
+		public void markACCCallDone(){
+			try{
+			int count = 0;
+			WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-mark-done"))));
+			while(webElement==null){
+				count = count++;
+				driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			}
+		System.out.println("going to click done button on ACC side");
+		
+		if(webElement!=null){
+			//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
+			webElement.click();
+			}
+			}catch(Exception exception){
+			exception.printStackTrace();
+		}
+	}
+		
+		@Test(priority=23)
+		public void endERCall(){
+			System.out.println("going to click end button on ER side");
+			int count =0;
+			try{
+				WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+				while(webElement==null){
+					count = count++;
+					driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+				}
+			System.out.println("going to click end button on ER side");
+			
+			if(webElement!=null){
+				//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
+				webElement.click();
+				}
+			}catch(Exception exception){
+			exception.printStackTrace();
+		}
+	}
+		
+		
+		@Test(priority=24)
+		public void markERCallDone(){
+			try{
+			int count = 0;
+			WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweBundle1CloseButton"))));
+			while(webElement==null){
+				count = count++;
+				driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			}
+		System.out.println("going to click done button on ER side");
+		
+		if(webElement!=null){
+			//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
+			webElement.click();
+			}
+			}catch(Exception exception){
+			exception.printStackTrace();
+		}
+	}	
+		
+		
+		
+public void tearDown(){
+	driver.close();
+	driverER.close();
+	GoogleHangout_NoVoice googleHangout_NoVoice = new GoogleHangout_NoVoice();
+	googleHangout_NoVoice.tearDown();
+}
 		
 }

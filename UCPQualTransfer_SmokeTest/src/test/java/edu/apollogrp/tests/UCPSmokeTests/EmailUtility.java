@@ -1,12 +1,15 @@
 package edu.apollogrp.tests.UCPSmokeTests;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.TimeZone;
 
 import microsoft.exchange.webservices.data.core.ExchangeService;
 import microsoft.exchange.webservices.data.core.enumeration.misc.ExchangeVersion;
@@ -21,78 +24,230 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-import com.apollo.reportgeneration.HtmlReport;
+//import com.aptimus.phxedu.seleniumbase.BasePage;
+
+//import edu.apollogrp.logger.Logger;
 
 public class EmailUtility {
+
 	
-	public static StringBuffer buffer = new StringBuffer();
-	public static String content = "";
-	public static HtmlReport htmlReport = null;
-	BufferedReader br = null;
-	FileReader fr = null;
-	public static String folderName="";
+	//String REPORT_URL = "http://10.97.6.73:8080/job/UCPQualTransfer_SmokeTest/";
 	
-	@Test(priority=0)	
-public void setEmail() {
-	try{
-	
+	String REPORT_URL = "http://10.99.208.16:8080/job/UCPQualTransfer_SmokeTest/";
+	String SUBJECT = "Qualification Transfer Smoke Tests ";
+	String BROWSER_TESTED = "Firefox 45.0";
 	WebDriver driver = new FirefoxDriver();
-	driver.get("http://localhost:8080/job/UCPQualTransfer_SmokeTest/ws/result/");
-	driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
- 
 	
-	List<WebElement> webElement=driver.findElements(By.tagName("a"));
-	boolean bool = true;
-	for (WebElement webElement2 : webElement) {
+	
+	@Test
+	public void runTesttOT( ) throws Exception{
+		String browser = "FF";
+		String suite = "regression";
 		
-		System.out.println("links available on "+webElement2.getText());
 		
-		if(webElement2.getText().contains("Result_")){
-			webElement2.click();
-			break;
-	}	
-		}
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-			List<WebElement> webElement3=driver.findElements(By.tagName("a"));
+		
+	    if(suite.equalsIgnoreCase("sanity"))
+		{
+//	    	driver.get("http://10.96.52.54:8080/view/FPM/job/fima/");
+		} else{
+	    	driver.get(REPORT_URL);
+	        Thread.sleep(2000);
+	    	try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		} 
 			
-			for (WebElement webElement4 : webElement3) {
-				if(webElement4.getText().equalsIgnoreCase("PC_Firefox_result.html")){
-					webElement4.click();
-					buffer.append(driver.getPageSource());
-					content=buffer.toString();
-					//driver.close();
-					break;
-				}
+       
+        String build = driver.findElement(By.xpath(".//*[@id='buildHistory']/div[2]/table/tbody/tr[2]/td/div[1]/a")).getText();
+        String build1 = build.trim();
+        String build2 = build1.substring(1);
+        String appUrl = "https://phoenix.edu";
+        System.out.println("Build number = "+build2);
 		
-	}
-	
-	
-	//driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-	
-	sendEmail(content);
-	//System.out.println(buffer.toString());
-}catch(Exception exception){
-	exception.printStackTrace();
-}
-}
-	
-	@Test(priority=1)	
-	public static void sendEmail(String content) throws Exception {
-		
-						
-			String to = "gaurav.mittal@apollo.edu";
-		
-		    ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
+		try {
+			String env = REPORT_URL+"ws/target/surefire-reports/emailable-report.html";
+			
+			String source = "";
+			StringBuffer stringBuf = new StringBuffer(); 
+			stringBuf.append("<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>TestNG:  Unit Test</title><style type=\"text/css\">table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {border:1px solid #000099;padding:.25em .5em .25em .5em}table.param th {vertical-align:bottom}td.numi,th.numi,td.numi_attn {text-align:right}tr.total td {font-weight:bold}table caption {text-align:center;font-weight:bold;}table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}table.passed td,table tr.passedeven td {background-color: #33FF33;}table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}table.passed td,table tr.skippedodd td {background-color: #dddddd;}table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}tr.stripe td,tr.stripe th {background-color: #E6EBF9;}p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}div.shootout {padding:2em;border:3px #4854A8 solid}</style></head><body>");
 
-            ExchangeCredentials credentials = new WebCredentials("gaurav.mittal@apollo.edu", "Apollo12#$");
+
+			stringBuf.append("Hi All,");
+			stringBuf.append("<p>Please find the below reports</p>");
+			
+			stringBuf.append(drawPieChart(env));
+			stringBuf.append(getEnvironmentDetails(build2, appUrl, browser));
+			stringBuf.append(resultTable());
+			System.out.println("Finished Resut Table");
+			stringBuf.append("</body></html>"); 
+
+			
+		// Details Report				
+			String body1="";
+			driver.get(REPORT_URL+"edu.apollogrp$UCPSmokeTests/"+build2+"/testReport/");
+			
+			int mainReportSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr")).size();
+			System.out.println("Main Rpoert--"+mainReportSize);
+			
+			for(int mainReportTable=1; mainReportTable<=mainReportSize; mainReportTable++){
+				
+				driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+mainReportTable+"]/td[1]/a")).click();
+				System.out.println(mainReportTable +"--Main Report Clicked");
+				Thread.sleep(2000);
+				int packageSize	 = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).size();
+				
+				if(packageSize==1)
+				{
+					driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a")).click();
+					Thread.sleep(2000);
+					int  detailReportSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr")).size();
+					System.out.println("Details Rpeort-----"+ detailReportSize);
+	
+					for(int detailReportTable =1; detailReportTable<=detailReportSize; detailReportTable++)
+					{	
+						String TestCase = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[1]/a")).getText();
+						String mark = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[3]")).getText();
+	
+						if(mark.equalsIgnoreCase("Passed")||mark.equalsIgnoreCase("Fixed")) {	         	 
+			         	  mark = "<font color='green'>Pass</font>";
+			            }
+						if(mark.equalsIgnoreCase("Failed")||mark.equalsIgnoreCase("Regression")) {
+			               mark = "<font color='red'>Fail</font>";
+			            }
+						if(mark.equalsIgnoreCase("Skipped")) {
+				               mark = "<font color='olive'>Skip</font>";
+				            }
+						String ts = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[2]")).getText();
+						body1 = body1 + "<tr><td>"+detailReportTable+"</td><td>"+TestCase+"</td><td>"+mark+"</td><td>"+ts+"</td>"+"</tr>";
+					}
+					String  link = "<center><a href="+driver.getCurrentUrl()+">"+ driver.findElement(By.xpath(".//*[@id='main-panel']/h1")).getText() +"</a></center>";
+					stringBuf.append("<br />"+ link
+							+"<table BORDER='1'  WIDTH='70%' align='middle'   CELLPADDING='2' CELLSPACING='1' ><font size='2'><face='Calibri'>"					
+							+ "<tr bgcolor='99CCFF'><td>S.No</td><td>TestCase</td><td>Result</td><td>Time</td></tr>"
+							+ body1	
+							+"</table>");
+					body1="";
+					driver.navigate().back();
+					Thread.sleep(2000);
+					
+			} else 
+			{	
+				System.out.println("Actaul size = "+packageSize);
+				
+				for(int i=1; i<=packageSize; i++){
+					
+				driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+i+"]/td[1]/a")).click();
+				System.out.println(i +"--Main Report Clicked");
+				Thread.sleep(2000);
+				
+				int  detailReportSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr")).size();
+				System.out.println("Details Rpeort-----"+ detailReportSize);
+
+				for(int detailReportTable =1; detailReportTable<=detailReportSize; detailReportTable++)
+				{	
+					String TestCase = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[1]/a")).getText();
+					String mark = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[3]")).getText();
+
+					if(mark.equalsIgnoreCase("Passed")||mark.equalsIgnoreCase("Fixed")) {	         	 
+		         	  mark = "<font color='green'>Pass</font>";
+		            }
+					if(mark.equalsIgnoreCase("Failed")||mark.equalsIgnoreCase("Regression")) {
+		               mark = "<font color='red'>Fail</font>";
+		            }
+					if(mark.equalsIgnoreCase("Skipped")) {
+			               mark = "<font color='olive'>Skip</font>";
+			            }
+					String ts = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+detailReportTable+"]/td[2]")).getText();
+					body1 = body1 + "<tr><td>"+detailReportTable+"</td><td>"+TestCase+"</td><td>"+mark+"</td><td>"+ts+"</td>"+"</tr>";
+				}
+				String  link = "<center><a href="+driver.getCurrentUrl()+">"+ driver.findElement(By.xpath(".//*[@id='main-panel']/h1")).getText() +"</a></center>";
+				stringBuf.append("<br />"+ link
+						+"<table BORDER='1'  WIDTH='70%' align='middle'   CELLPADDING='2' CELLSPACING='1' ><font size='2'><face='Calibri'>"					
+						+ "<tr bgcolor='99CCFF'><td>S.No</td><td>TestCase</td><td>Result</td><td>Time</td></tr>"
+						+ body1	
+						+"</table>");
+				body1="";
+				driver.navigate().back();
+				Thread.sleep(2000);
+				}
+			
+			}
+				
+				driver.navigate().back();
+				Thread.sleep(2000);
+			}
+			
+
+			stringBuf.append("</body></html>"); 
+			source = stringBuf.toString();
+
+//			source = stringBuf.toString();
+			sendEmail(source,SUBJECT+" - "+generateDateFormat());
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+
+	
+	
+
+	
+
+	
+	public void sendEmail(String source,String subject) throws Exception {
+		if(source.equals("")){
+			//////System.out.println("Email will not send as there are parsing errors");
+		}else{
+		/*	HtmlEmail email = new HtmlEmail();
+			email.setHostName("mailhost.apollogrp.edu");
+			
+
+			//email.addTo("vph@apollo.edu");
+			//email.addTo("vph@apollo.edu");
+
+			
+			String to = "DGC-APO-Corporate-LPQA-SSProjects@apollo.edu";
+		//	String to = "vph@apollo.edu";
+			String[] toArr = to.split(",");
+			for(String t:toArr){
+				email.addTo(t);
+			}
+
+			String cc = "FinancialPlanManagementScrumTeam@apollo.edu,FinancialPlanManagementDEVTeam@apollo.edu";
+		//	String cc = "vph@apollo.edu";
+			String[] ccArr = cc.split(",");
+			for(String t:ccArr){
+				email.addCc(t);
+			}
+
+			email.setFrom("vph@apollo.edu");
+			//email.setSubject("Daily Sanity - UoP-Prod - Classroom");
+			
+			email.setSubject(subject);
+			
+			email.setHtmlMsg(source);			
+			
+			email.send();
+*/			
+			String to = "gaurav.mittal@apollo.edu";
+			
+//			String to = "Apparao.Kotte@apollo.edu,vph@apollo.edu,jmuniswa@apollo.edu,Manoj.Kumar@apollo.edu,Roopa.Jaganoor@apollo.edu,Raja.Muthu@apollo.edu,Satyajit.Samal@apollo.edu";
+			
+            System.out.println("Enter sendMailViaExchnageService");
+
+            ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
+
+            ExchangeCredentials credentials = new WebCredentials("gaurav.mittal@apollo.edu", "Education12#$");
             service.setCredentials(credentials);
             service.setUrl(new URI("https://outlook.office365.com/EWS/Exchange.asmx"));
 
             EmailMessage msg = new EmailMessage(service);
-            msg.setSubject("Qualification Transfer Smoke Test Cases");
-            msg.setBody(MessageBody.getMessageBodyFromText(content));
-           // msg.se
+            msg.setSubject(subject);
+            msg.setBody(MessageBody.getMessageBodyFromText(source.toString()));
             List<String> toAddressList = Arrays.asList(to.split("\\s*,\\s*"));
             Iterator<String> mailList = toAddressList.iterator();
 
@@ -102,10 +257,227 @@ public void setEmail() {
 					
 			System.out.println("\nMail was sent successfully.");
 
+			System.out.println("Exit sendMailViaExchnageService");
+
+
 
 		}
+	}
+
 	
+	public String generateDateFormat(){
+
+		String date="";
+		Date dateNow = new Date();
+//		SimpleDateFormat ft = new SimpleDateFormat("MM/dd/yyyy");
+		DateFormat formatter= new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+		formatter.setTimeZone(TimeZone.getTimeZone("IST"));
+		date = formatter.format(dateNow);
+		return date;
+
+	}
+
+
+	public String parseHtmlSource(String reportURL) throws IOException, URISyntaxException{
+		
+		driver.get(reportURL);
+		String str= driver.getPageSource(); 
 	
+		return str.toString();
+	}
+
+	public String getEnvironmentDetails(String build, String appUrl, String browserType) throws IOException, URISyntaxException{
+		StringBuffer sb = new StringBuffer();
+		
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+
+		sb.append("<table BORDER='2'   WIDTH='70%' align='middle'  CELLPADDING='2' CELLSPACING='1'> ");
+		sb.append("<th bgcolor='#5D7B9D'  colspan=2><font color='#fff' size=3> Environment Details </font></th>");
+		
+		sb.append("<tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>APPICATION URL </font>	</td><td align='center' size=2> <a href="+ appUrl + "> " + appUrl + "</a></td></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>BUILD NUMBER </td><td  align='center' size=2>  "
+				+ build + " </td> </font></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>BROWSER TESTED </td><td  align='center' size=2>  "
+				+ BROWSER_TESTED + "</td> </font></tr>");
+		sb.append("<td ALIGN='CENTER'><font  size=2>DATE OF EXECUTION  </td><td  align='center' size=2>  "
+				+ generateDateFormat() + " </td> </font></tr>");
+
+		sb.append("</table>");
+
+		return sb.toString();
+
+	}
+	
+	public String resultTable() throws Exception, URISyntaxException{
+		
+		
+		StringBuffer sb = new StringBuffer();
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		sb.append( "<br/>" );
+		driver.get(REPORT_URL);
+		Thread.sleep(2500);
+		String build = driver.findElement(By.xpath(".//*[@id='buildHistory']/div[2]/table/tbody/tr[2]/td/div[1]/a")).getText();
+	    String build1 = build.trim();
+	    String build2 = build1.substring(1);
+		driver.get(REPORT_URL+"edu.apollogrp$UCPSmokeTests/"+build2+"/testReport/");
+		
+		
+		
+		String header = "<tr bgcolor='99CCFF'><TH ALIGN='CENTER'>Test class</TH><TH ALIGN='CENTER'>Total </TH><TH ALIGN='CENTER' bgcolor='66FF33'>Passed</TH><TH ALIGN='CENTER' bgcolor='FF3333'>Failed</TH><TH ALIGN='CENTER' bgcolor='FFFF33'>Skipped</TH><TH ALIGN='CENTER'>Duration</TH></tr>";
+		
+		String body = "";
+		int allTotal = 0;
+		int allPassed = 0;
+		int allFailed = 0;
+		int allSkipped = 0;
+		
+		String totalDuration = driver.findElement(By.xpath(".//*[@id='main-panel']/div[2]/a")).getText();
+		totalDuration = totalDuration.replaceAll("Took ", "");
+
+		String Total ="" ;
+		String Failed ="" ;
+		String Skipped ="" ;
+		String Passed  ="" ;
+		String Time ="" ;
+		String TestPackage ="" ;
+		
+		String Total1 ="" ;
+		String Failed1 ="" ;
+		String Skipped1 ="" ;
+		String Passed1  ="" ;
+		String Time1 ="" ;
+		String TestPackage1 ="" ;
+		
+		Thread.sleep(2000);
+		List<WebElement> resultTable = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr"));
+		for(int k=1;k<=resultTable.size();k++)
+		{
+			driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[1]/a/span")).click();
+			Thread.sleep(2000);
+			int packageSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).size();
+			
+			 TestPackage  = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).getText();			 
+			 Total 	   	  = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[9]")).getText();			
+			 Failed       = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[3]")).getText();
+			 Skipped      = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[5]")).getText();
+			 Passed       = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[7]")).getText();			
+			 Time         = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[2]")).getText();
+			
+			
+			if(packageSize>1){
+				System.out.println("Package size ===>>>>> "+packageSize);
+				List<WebElement> resultTable1 = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr"));
+				for(int j=2;j<=resultTable1.size();j++)
+				{
+				 TestPackage1  = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+j+"]/td[1]/a/span")).getText();			 
+				 Total1 	   = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+j+"]/td[9]")).getText();			
+				 Failed1   	   = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+j+"]/td[3]")).getText();
+				 Skipped1      = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+j+"]/td[5]")).getText();
+				 Passed1       = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[7]")).getText();			
+				 Time1         = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+j+"]/td[2]")).getText();
+								 
+					body = body + "<b><tr ><td >"+TestPackage1+"</td><td ALIGN='CENTER'>"+Total1+"</td><td ALIGN='CENTER'>"+Passed1+"</td><td ALIGN='CENTER'>"+Failed1+"</td><td ALIGN='CENTER'>"+Skipped1+"</td><td ALIGN='CENTER'>"+Time1+"</td>"+"</tr></b>";
+					
+					allTotal     = allTotal+ Integer.parseInt(Total1);
+					allPassed    = allPassed+ Integer.parseInt(Passed1);
+					allFailed    = allFailed+ Integer.parseInt(Failed1);
+					allSkipped   = allSkipped+ Integer.parseInt(Skipped1);
+					
+				}
+
+			}
+			 
+			driver.navigate().back();
+			Thread.sleep(2000);
+			
+			body = body + "<b><tr ><td >"+TestPackage+"</td><td ALIGN='CENTER'>"+Total+"</td><td ALIGN='CENTER'>"+Passed+"</td><td ALIGN='CENTER'>"+Failed+"</td><td ALIGN='CENTER'>"+Skipped+"</td><td ALIGN='CENTER'>"+Time+"</td>"+"</tr></b>";
+		
+			allTotal     = allTotal+ Integer.parseInt(Total);
+			allPassed    = allPassed+ Integer.parseInt(Passed);
+			allFailed    = allFailed+ Integer.parseInt(Failed);
+			allSkipped   = allSkipped+ Integer.parseInt(Skipped);
+		
+		}
+		
+		body = body + "<tr bgcolor='#FFDAB9'><b><td >"+""+"</td><td ALIGN='CENTER'>"+allTotal+"</td><td ALIGN='CENTER'>"+allPassed+"</td><td ALIGN='CENTER'>"+allFailed+"</td><td ALIGN='CENTER'>"+allSkipped+"</td><td ALIGN='CENTER'>"+totalDuration+"</td>"+"</b></tr>";
+		
+		sb.append("<table BORDER='2'   WIDTH='70%' align='middle'  CELLPADDING='2' CELLSPACING='1'> ");
+		sb.append("<th bgcolor='#5D7B9D'  colspan=6><font color='#fff' size=3> Detailed report table </font></th>");
+		
+		sb.append(header);
+		sb.append(body);
+		sb.append("</table>");
+		
+
+		return sb.toString();
+
+	}
+
+	
+
+	public String drawPieChart(String EMAILABLE_REPORT) throws InterruptedException  {
+        int passi,  skipi,  faili;
+        driver.get(REPORT_URL);
+		Thread.sleep(2500);
+		String build = driver.findElement(By.xpath(".//*[@id='buildHistory']/div[2]/table/tbody/tr[2]/td/div[1]/a")).getText();
+	    String build1 = build.trim();
+	    String build2 = build1.substring(1);
+		driver.get(REPORT_URL+"edu.apollogrp$UCPSmokeTests/"+build2+"/testReport/");
+		
+        
+        int allTotal = 0;
+		int allPassed = 0;
+		int allFailed = 0;
+		int allSkipped = 0;
+		
+		String Total ="" ;
+		String Failed ="" ;
+		String Skipped ="" ;
+		String Passed  ="" ;
+		
+		Thread.sleep(2000);
+		List<WebElement> resultTable = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr"));
+		for(int k=1;k<=resultTable.size();k++)
+		{
+
+						 
+			 Total 	    = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[9]")).getText();			
+			 Failed     = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[3]")).getText();
+			 Skipped    = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[5]")).getText();
+			 Passed     = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+k+"]/td[7]")).getText();			
+			
+			
+			allTotal     = allTotal+ Integer.parseInt(Total);
+			allPassed    = allPassed+ Integer.parseInt(Passed);
+			allFailed    = allFailed+ Integer.parseInt(Failed);
+			allSkipped   = allSkipped+ Integer.parseInt(Skipped);
+		
+		}
+		
+        
+        passi = allPassed;
+        skipi = allSkipped;
+        faili = allFailed;
+        
+        int total = passi+skipi+faili;
+        
+        String pass=Integer.toString(passi*100/total);
+        String skip=Integer.toString(skipi*100/total);
+        String fail=Integer.toString(faili*100/total);
+     
+        String alt="\" alt=";
+        String googlepiechart="\"Google Chart";
+        String icon="\"/></center>";    
+        String urlimg="\"http://chart.apis.google.com/chart?";
+        String img="<center><img src="+urlimg+"chtt=Pie+Chart&amp;chts=000000,12&amp;chs=300x150&amp;chf=bg,s,ffffff&amp;cht=p3&amp;chd=t:passtest,failtest,skiptest&amp;chl=Passed|Failed|Skipped&amp;chco=006600,ff0000,ffff00"+alt+googlepiechart+icon; 
+        img=img.replaceAll("passtest", pass);
+        img=img.replaceAll("failtest", fail);
+        img=img.replaceAll("skiptest", skip);
+        return img;
+ }
+
 }
-
-
