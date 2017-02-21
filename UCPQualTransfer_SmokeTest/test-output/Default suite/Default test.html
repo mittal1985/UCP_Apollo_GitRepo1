@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>25/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 10 11:21:51 MST 2017</td>
+<td>Started on:</td><td>Tue Feb 21 10:36:37 MST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>132 seconds (132179 ms)</td>
+<tr><td>Total time:</td><td>1156 seconds (1156741 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,90 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.erInboundCall()'><b>erInboundCall</b><br>Test class: edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType</td>
+<td><div><pre>java.lang.AssertionError: exception in checkContactTab
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.checkContactTab(ERInbound_CallType.java:219)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickCaseInfo(ERInbound_CallType.java:195)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getCall(ERInbound_CallType.java:165)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getAgentReady(ERInbound_CallType.java:149)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickSubmit(ERInbound_CallType.java:113)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickPassword(ERInbound_CallType.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickUserName(ERInbound_CallType.java:72)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.setUp(ERInbound_CallType.java:49)
+	at edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.erInboundCall(UCPSmokeTests_CallType.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace23880693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23880693'><pre>java.lang.AssertionError: exception in checkContactTab
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.checkContactTab(ERInbound_CallType.java:219)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickCaseInfo(ERInbound_CallType.java:195)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getCall(ERInbound_CallType.java:165)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getAgentReady(ERInbound_CallType.java:149)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickSubmit(ERInbound_CallType.java:113)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickPassword(ERInbound_CallType.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickUserName(ERInbound_CallType.java:72)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.setUp(ERInbound_CallType.java:49)
+	at edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.erInboundCall(UCPSmokeTests_CallType.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>985</td>
+<td>edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,130 +159,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickAgentScritping()'><b>clickAgentScritping</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
+<td title='edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.qualficationTransfer()'><b>qualficationTransfer</b><br>Test class: edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType</td>
 <td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickCaseInfo()'><b>clickCaseInfo</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickConsultButton()'><b>clickConsultButton</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickEnrollmentqualtransfer()'><b>clickEnrollmentqualtransfer</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickFirstRecord()'><b>clickFirstRecord</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>16</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickInstantCallConference()'><b>clickInstantCallConference</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>4</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickInstantCallTransfer()'><b>clickInstantCallTransfer</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>4</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickNameSearch()'><b>clickNameSearch</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>8</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickPassword()'><b>clickPassword</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickPasswordER()'><b>clickPasswordER</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickQualify()'><b>clickQualify</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickSearchMyFavButton()'><b>clickSearchMyFavButton</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickStartTransferButton()'><b>clickStartTransferButton</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>9</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickSubmit()'><b>clickSubmit</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickSubmitER()'><b>clickSubmitER</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>9</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickTransferDropdown()'><b>clickTransferDropdown</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>14</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickUserName()'><b>clickUserName</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.clickUserNameER()'><b>clickUserNameER</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.endACCCall()'><b>endACCCall</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>4</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.endERCall()'><b>endERCall</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>2</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.getCall()'><b>getCall</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>34</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.markACCCallDone()'><b>markACCCallDone</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>1</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.markERCallDone()'><b>markERCallDone</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>0</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.setUp()'><b>setUp</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>9</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
-<tr>
-<td title='edu.apollogrp.tests.InternalTransfer.InternalTransfer.setUpER()'><b>setUpER</b><br>Test class: edu.apollogrp.tests.InternalTransfer.InternalTransfer</td>
-<td></td>
-<td>6</td>
-<td>edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09</td></tr>
+<td>171</td>
+<td>edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c</td></tr>
 </table><p>
 </body>
 </html>

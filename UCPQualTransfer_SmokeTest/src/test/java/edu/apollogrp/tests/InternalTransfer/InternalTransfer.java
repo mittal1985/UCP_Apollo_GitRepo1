@@ -16,15 +16,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.apollo.googlehangout.GoogleHangout_NoVoice;
-import com.apollo.reportgeneration.Generic_Functions;
-import com.apollo.reportgeneration.HtmlReport;
+import com.apollo.googlehangout.GoogleHangout_Chrome;
+
 
 public class InternalTransfer {
 //4807548519
 	WebDriver driver = null;
 	WebDriver driverFA = null;
-	public static HtmlReport currentSuit = new HtmlReport();
 	public String folder;
 	public String screen_Header;
 	public String app_Name_Final;
@@ -80,12 +78,10 @@ public class InternalTransfer {
 			//webElement.sendKeys("ucp_acc1");
 			
 			webElement.sendKeys("ucpeawe2");
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER Username is loaded successfully", "ER Username should be loaded correctly", "ER Username is loaded correctly");
 			
 	
 		}else{
 			System.out.println("element is null");
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ER Username is loaded successfully", "ER Username should be loaded correctly", "ER Username is not loaded correctly");
 			
 		}
 		
@@ -108,12 +104,10 @@ public class InternalTransfer {
 			//webElement.sendKeys("ucp_acc1");
 			
 			webElement.sendKeys("ucpeawe2");
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER Password is loaded successfully", "ER Password should be loaded correctly", "ER Password is loaded correctly");
 			
 	
 		}else{
 			System.out.println("element is null");
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ER Password is loaded successfully", "ER Password should be loaded correctly", "ER Password is not loaded correctly");
 			
 		}
 	}catch(Exception exception){
@@ -134,12 +128,10 @@ public class InternalTransfer {
 			
 			//webElement.sendKeys("ucp_acc1");
 			
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER Submit button is loaded successfully", "ER Submit button should be loaded correctly", "ER Submit button is loaded correctly");
 			
 	
 		}else{
 			System.out.println("element is null");
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ER Submit button is loaded successfully", "ER Submit button should be loaded correctly", "ER Submit button is not loaded correctly");
 			
 		}
 		
@@ -175,12 +167,10 @@ public class InternalTransfer {
 			//webElement.sendKeys("ucp_acc1");
 			
 			webElement.sendKeys("ucp_acc_wwe2");
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ACC Username button is loaded successfully", "ACC Username button should be loaded correctly", "ACC Username button is loaded correctly");
 			
 	
 		}else{
 			System.out.println("element is null");
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ACC Username button is loaded successfully", "ACC Username button should be loaded correctly", "ACC Username button is not loaded correctly");
 			
 		}
 	}catch(Exception exception){
@@ -201,12 +191,10 @@ public class InternalTransfer {
 			//webElement.sendKeys("ucp_acc1");
 			
 			webElement.sendKeys("ucp_acc_wwe2");
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ACC Password button is loaded successfully", "ACC Password button should be loaded correctly", "ACC Password button is loaded correctly");
 			
 	
 		}else{
 			System.out.println("element is null");
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ACC Password button is loaded successfully", "ACC Password button should be loaded correctly", "ACC Password button is not loaded correctly");
 			
 		}
 	}catch(Exception exception){
@@ -225,11 +213,9 @@ public class InternalTransfer {
 				
 				//webElement.sendKeys("ucp_acc1");
 				
-				Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ACC Submit button is loaded successfully", "ACC Submit button should be loaded correctly", "ACC Submit button is loaded correctly");
 				
 		
 			}else{
-				Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ACC Submit button is loaded successfully", "ACC Submit button should be loaded correctly", "ACC Submit button is not loaded correctly");
 				
 			}
 			webElement.click();
@@ -243,7 +229,7 @@ public class InternalTransfer {
 	public void getCall(){
 		try{
 			
-			GoogleHangout_NoVoice googleHangout= new GoogleHangout_NoVoice();
+			GoogleHangout_Chrome googleHangout= new GoogleHangout_Chrome();
 			googleHangout.setUp(phoneNumber);
 		int count = 0;
 		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("agent-desktop-container-title"))));
@@ -266,10 +252,8 @@ public class InternalTransfer {
 		//after receiving call
 		if(driver.findElements(By.id("wweVoice1HangupButton")).size()!=0){
 			System.out.println("done");
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether Call is received successfully", "Call is received should be loaded correctly", "Call is received correctly");
 			
 		}else{
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether Call is received successfully", "Call is received should be loaded correctly", "Call is not received correctly");
 			
 		}
 		
@@ -291,11 +275,9 @@ public class InternalTransfer {
 			
 			//webElement.sendKeys("ucp_acc1");
 			
-			Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether Case Info is displayed successfully", "Case Info should be  displayed correctly", "Case Info is displayed correctly");
 			
 	
 		}else{
-			Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether Case Info is displayed successfully", "Case Info should be  displayed correctly", "Case Info is not displayed correctly");
 			
 		}
 		
@@ -337,11 +319,9 @@ public class InternalTransfer {
 				
 				//webElement.sendKeys("ucp_acc1");
 				
-				Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether AgentScritping is displayed successfully", "AgentScritping should be  displayed correctly", "AgentScritping is displayed correctly");
 				
 		
 			}else{
-				Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether AgentScritping is displayed successfully", "AgentScritping should be  displayed correctly", "AgentScritping is displayed correctly");
 				
 			}
 			
@@ -381,10 +361,8 @@ public class InternalTransfer {
 					if(webElement!=null){
 						//webElement.sendKeys("ucp_acc1");
 						webElement.click();
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether AgentScritping Search is displayed successfully", "AgentScritping Search should be  displayed correctly", "AgentScritping Search is displayed correctly");
 				
 					}else{
-						Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether AgentScritping Search is displayed successfully", "AgentScritping Search should be  displayed correctly", "AgentScritping Search is not displayed correctly");
 						
 					}
 				
@@ -410,10 +388,8 @@ public class InternalTransfer {
 						if(webElement!=null){
 							//webElement.sendKeys("ucp_acc1");
 							 (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable(webElement)).click();
-							Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether FirstRecord is clicked successfully", "FirstRecord should be clicked correctly", "FirstRecord is displayed correctly");
 					
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether FirstRecord is clicked successfully", "FirstRecord should be clicked correctly", "FirstRecord is not  displayed correctly");
 							
 						}
 					 Thread.sleep(4000);
@@ -439,10 +415,8 @@ public class InternalTransfer {
 						if(webElement!=null){
 							//webElement.sendKeys("ucp_acc1");
 							 (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable(webElement)).click();
-							Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether Qualify is clicked successfully", "Qualify should be clicked correctly", "Qualify is clicked correctly");
 					
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether Qualify is clicked successfully", "Qualify should be clicked correctly", "Qualify is not  clicked correctly");
 							
 						}
 				
@@ -463,7 +437,6 @@ public class InternalTransfer {
 					Thread.sleep(5000);
 						if(webElement.isDisplayed()){
 						System.out.println("webelement is displayed");
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether Start Transfer is clicked successfully", "Start Transfer should be clicked correctly", "Start Transfer is clicked correctly");
 						
 						webElement.click();
 					}else{
@@ -487,9 +460,7 @@ public class InternalTransfer {
 					System.out.println("in clickTransferDropdown");
 					WebElement webelement = driver.findElement(By.id("transfervalue"));
 					if(webelement!=null){
-					Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether TransferDropdown is clicked successfully", "TransferDropdown should be clicked correctly", "TransferDropdown is clicked correctly");
 					}else{
-						Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether TransferDropdown is clicked successfully", "TransferDropdown should be clicked correctly", "TransferDropdown is not clicked correctly");
 						
 					}
 					Select select = new Select(webelement);
@@ -511,9 +482,7 @@ public class InternalTransfer {
 					System.out.println("in clickConsultButton");
 					WebElement webelement = driver.findElement(By.id("wweBundle1ConsultButton"));
 					if(webelement!=null){
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ConsultButton is clicked successfully", "ConsultButton should be clicked correctly", "ConsultButton is clicked correctly");
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether ConsultButton is clicked successfully", "ConsultButton should be clicked correctly", "ConsultButton is not clicked correctly");
 							
 						}
 					webelement.click();
@@ -533,9 +502,7 @@ public class InternalTransfer {
 					System.out.println("in clickSearchMyFavButton");
 					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorSearchFavoritesButton"));
 					if(webelement!=null){
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether SearchMyFavButton is clicked successfully", "SearchMyFavButton should be clicked correctly", "SearchMyFavButton is clicked correctly");
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether SearchMyFavButton is clicked successfully", "SearchMyFavButton should be clicked correctly", "SearchMyFavButton is not clicked correctly");
 							
 						}
 					webelement.click();
@@ -555,9 +522,7 @@ public class InternalTransfer {
 					System.out.println("in clickEnrollmentqualtransfer");
 					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorItem1DefaultActionButton"));
 					if(webelement!=null){
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether Enrollmentqualtransfer is clicked successfully", "Enrollmentqualtransfer should be clicked correctly", "Enrollmentqualtransfer is clicked correctly");
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether Enrollmentqualtransfer is clicked successfully", "Enrollmentqualtransfer should be clicked correctly", "Enrollmentqualtransfer is not clicked correctly");
 							
 						}
 					webelement.click();
@@ -580,9 +545,7 @@ public class InternalTransfer {
 					System.out.println("in clickInstantCallTransfer");
 					WebElement webelement = driver.findElement(By.id("wweVoice1CompleteConferenceButton"));
 					if(webelement!=null){
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether InstantCallTransfer is clicked successfully", "InstantCallTransfer should be clicked correctly", "InstantCallTransfer is clicked correctly");
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether InstantCallTransfer is clicked successfully", "InstantCallTransfer should be clicked correctly", "InstantCallTransfer is not clicked correctly");
 							
 						}
 					webelement.click();
@@ -603,9 +566,7 @@ public class InternalTransfer {
 					System.out.println("in clickInstantCallTransfer");
 					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorActiveItem0DefaultActionButton"));
 					if(webelement!=null){
-						Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether InstantCallConference is clicked successfully", "InstantCallConference should be clicked correctly", "InstantCallConference is clicked correctly");
 						}else{
-							Generic_Functions.WriteFail(driver, currentSuit, folder, "Verify whether InstantCallConference is clicked successfully", "InstantCallConference should be clicked correctly", "InstantCallConference is not clicked correctly");
 							
 						}
 					webelement.click();
@@ -711,7 +672,7 @@ public class InternalTransfer {
 public void tearDown(){
 	driver.close();
 	driverFA.close();
-	GoogleHangout_NoVoice googleHangout_NoVoice = new GoogleHangout_NoVoice();
+	GoogleHangout_Chrome googleHangout_NoVoice = new GoogleHangout_Chrome();
 	googleHangout_NoVoice.tearDown();
 }
 		

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.apollogrp</groupId>
-  <artifactId>UCPSmokeTests</artifactId>
+  <artifactId>UCPQualTransfer_SmokeTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
 	<properties> 
@@ -82,8 +82,10 @@
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>  -->
 		
-		<!-- <dependency> <groupId>net.sourceforge.jexcelapi</groupId> <artifactId>jxl</artifactId> 
-			<version>2.6</version> </dependency> -->
+		 <dependency> <groupId>net.sourceforge.jexcelapi</groupId>
+		 <artifactId>jxl</artifactId> 
+			<version>2.6</version> 
+			</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -129,11 +131,11 @@
 	
 	<repositories>
 
-		<!-- <repository>
+		<repository>
 			<id>lp-public-releases</id>
-			<name>learningplatform-ci.apollogrp.edu-releases</name> -->
+			<name>learningplatform-ci.apollogrp.edu-releases</name>
 			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
-			<!-- <url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public</url>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -143,9 +145,9 @@
 		</repository>
 		<repository>
 			<id>lp-public-snapshots</id>
-			<name>learningplatform-ci.apollogrp.edu-snapshots</name> -->
+			<name>learningplatform-ci.apollogrp.edu-snapshots</name>
 			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
-			<!-- <url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public-snapshots</url>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public-snapshots</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -155,9 +157,9 @@
 		</repository>
 		<repository>
 			<id>lp-third-party</id>
-			<name>learningplatform-ci.apollogrp.edu-thirdparty</name> -->
+			<name>learningplatform-ci.apollogrp.edu-thirdparty</name>
 			<!-- <url>http://plaxmavn001.apollogrp.edu:8080/artifactory/repo</url> -->
-			<!-- 	<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/repositories/thirdparty</url>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/repositories/thirdparty</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -165,7 +167,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-		
+		<repository>
+			<id>java-net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+				
 		<repository>
 			<id>sli4j-repository</id>
 			<name>sli4j Repository for Maven</name>
@@ -176,15 +182,36 @@
 		  <id>apollo-snapshot</id>
 		  <name>Apollo Group Artifactory - Snapshot</name>
 		  <url>http://artifactory.apollogrp.edu/artifactory/libs-snapshot-local</url>
-		</repository> -->
-		<repository>
-			<id>java-net</id>
-			<url>http://download.java.net/maven/2</url>
 		</repository>
-				
-		
 
 	</repositories>
+
+
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+				
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>http://learningplatform-ci.apollogrp.edu:8081/nexus/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories> 
 
 
 

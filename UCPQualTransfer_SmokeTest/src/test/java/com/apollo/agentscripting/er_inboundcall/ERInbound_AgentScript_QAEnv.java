@@ -3,6 +3,7 @@ package com.apollo.agentscripting.er_inboundcall;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,9 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.apollo.googlehangout.GoogleHangout_NoVoice;
-import com.apollo.reportgeneration.Generic_Functions;
-import com.apollo.reportgeneration.HtmlReport;
+import com.apollo.googlehangout.GoogleHangout_FF;
+
 
 //4804944778
 public class ERInbound_AgentScript_QAEnv {
@@ -38,7 +38,7 @@ public class ERInbound_AgentScript_QAEnv {
 }*/
 	WebDriver driver = null;
 	public String phoneNumber="4804944778";
-	public GoogleHangout_NoVoice googleHangout= null;
+	public GoogleHangout_FF googleHangout= null;
 	
 	
 	@Test(priority=0)
@@ -49,6 +49,8 @@ public class ERInbound_AgentScript_QAEnv {
 		driver.get("http://genesyswwe.qaapollogrp.edu:8080/ui/ad/v1/index.html");
 		
 		driver.manage().window().maximize();
+		
+		
 	}
 	
 	
@@ -161,10 +163,10 @@ public class ERInbound_AgentScript_QAEnv {
 	public void getCall(){
 		try{
 			
-			googleHangout= new GoogleHangout_NoVoice();
+			googleHangout= new GoogleHangout_FF();
 			googleHangout.setUp(phoneNumber);
 	
-	
+	System.out.println("going out of googlehangouut");
 		}catch(Exception exception){
 			exception.printStackTrace();
 		}
@@ -175,21 +177,26 @@ public class ERInbound_AgentScript_QAEnv {
 	@Test(priority=6)
 	public void clickCaseInfo(){
 		try{
-		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweCaseData1Label"))));
-		System.out.println("CaseInfo webElement--------->"+webElement);
-		if(webElement!=null){
-			System.out.println("webelement is not null");
-			webElement.click();
-			
-			
-		}else{
-			
-			
-		}
 		
+			System.out.println("in clickcaseinfo-----");
+			driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+			WebElement webElement = driver.findElement(((By.xpath("//div[@class= 'wwe-data-text-value']"))));
+			
+			if(webElement!=null){
+				System.out.println("not null");
+			}
+			
+			WebElement webElement1 = driver.findElement(((By.xpath("//div[@class= 'wwe-data-text-value' and text()='Enrollment Inbound Direct']"))));
+			
+			if(webElement1!=null){
+				System.out.println("not null");
+			}
+			
+			System.out.println("verifying text s"+webElement1.getText());
 		
+			Assert.assertEquals(webElement1.getText(), "Enrollment Inbound Direct") ;
 	
-		webElement.click();
+	//	webElement.click();
 		
 		}catch(Exception exception){
 			exception.printStackTrace();
@@ -197,7 +204,7 @@ public class ERInbound_AgentScript_QAEnv {
 	}
 	
 	
-	@Test(priority=7)
+/*	@Test(priority=7)
 	public void clickCallType(){
 		try{
 		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[@id='wweCaseData1callDescriptionValue']/div[1]/div[1]"))));
@@ -218,12 +225,12 @@ public class ERInbound_AgentScript_QAEnv {
 	}catch(Exception exception){
 		exception.printStackTrace();
 	}
-	}
+	}*/
 	
 
-	@Test(priority=8)
+	@Test(priority=7)
 	public void checkContactTab(){
-	
+		System.out.println("in checkContactTab");
 		WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.id("CaseRightTabs1Item0"))));
 		boolean bool = webElement.isDisplayed();
 		System.out.println(""+bool);
@@ -236,12 +243,12 @@ public class ERInbound_AgentScript_QAEnv {
 			Assert.fail();
 		}
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-		
+		System.out.println("out checkContactTab");
 	}
 	
-	@Test(priority=9)
+	@Test(priority=8)
 	public void checkContactInformation(){
-	
+		System.out.println("in checkContactInformation");
 		WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.className("no_contact_selected_information"))));
 		boolean bool = webElement.isDisplayed();
 		System.out.println(""+bool);
@@ -254,10 +261,10 @@ public class ERInbound_AgentScript_QAEnv {
 			Assert.fail();
 		}
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-		
+		System.out.println("out checkContactInformation");
 	}
 	
-	@Test(priority=10)
+	@Test(priority=9)
 	public void clickEndCall(){
 	try{
 		System.out.println("in clickEndCall");
@@ -268,13 +275,13 @@ public class ERInbound_AgentScript_QAEnv {
 			System.out.println("webelement is null");
 		}
 		driver.manage().timeouts().implicitlyWait(8000, TimeUnit.SECONDS);
-		
+		System.out.println("out clickEndCall");
 	}catch(Exception exception){
 	exception.printStackTrace();
 	}
 	}
 	
-	@Test(priority=11)
+	@Test(priority=10)
 	public void clickDoneButton(){
 		try{
 			System.out.println("in clickDoneButton");
@@ -285,7 +292,7 @@ public class ERInbound_AgentScript_QAEnv {
 					System.out.println("webelement is null");
 				}
 				
-			
+				System.out.println("out clickDoneButton");
 		
 	}catch(Exception exception){
 		exception.printStackTrace();
@@ -294,10 +301,10 @@ public class ERInbound_AgentScript_QAEnv {
 	
 	
 	
-	@Test(priority=12)
+	@Test(priority=11)
 	public void tearDown(){
 		driver.close();
-		googleHangout=new GoogleHangout_NoVoice();
+		googleHangout=new GoogleHangout_FF();
 		googleHangout.tearDown();
 	}
 	

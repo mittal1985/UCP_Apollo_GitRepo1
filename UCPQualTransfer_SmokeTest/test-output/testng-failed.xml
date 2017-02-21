@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv">
+      <class name="edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType">
         <methods>
-          <include name="tearDown"/>
+          <include name="erInboundCall"/>
         </methods>
-      </class> <!-- com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv -->
+      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,113 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="25" passed="25">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="132179" started-at="2017-02-10T18:21:51Z" finished-at="2017-02-10T18:24:03Z">
+  <suite name="Default suite" duration-ms="1156741" started-at="2017-02-21T17:36:37Z" finished-at="2017-02-21T17:55:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="132179" started-at="2017-02-10T18:21:51Z" finished-at="2017-02-10T18:24:03Z">
-      <class name="edu.apollogrp.tests.InternalTransfer.InternalTransfer">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="setUp" duration-ms="9689" started-at="2017-02-10T11:21:51Z" finished-at="2017-02-10T11:22:01Z">
+    <test name="Default test" duration-ms="1156741" started-at="2017-02-21T17:36:37Z" finished-at="2017-02-21T17:55:54Z">
+      <class name="edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType">
+        <test-method status="PASS" signature="qualficationTransfer()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c]" name="qualficationTransfer" duration-ms="171429" started-at="2017-02-21T10:36:37Z" finished-at="2017-02-21T10:39:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUpER()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="setUpER" duration-ms="6625" started-at="2017-02-10T11:22:01Z" finished-at="2017-02-10T11:22:08Z">
+        </test-method> <!-- qualficationTransfer -->
+        <test-method status="FAIL" signature="erInboundCall()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c]" name="erInboundCall" duration-ms="985279" started-at="2017-02-21T10:39:28Z" finished-at="2017-02-21T10:55:54Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[exception in checkContactTab]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: exception in checkContactTab
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.checkContactTab(ERInbound_CallType.java:219)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickCaseInfo(ERInbound_CallType.java:195)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getCall(ERInbound_CallType.java:165)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getAgentReady(ERInbound_CallType.java:149)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickSubmit(ERInbound_CallType.java:113)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickPassword(ERInbound_CallType.java:94)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickUserName(ERInbound_CallType.java:72)
+	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.setUp(ERInbound_CallType.java:49)
+	at edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.erInboundCall(UCPSmokeTests_CallType.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpER -->
-        <test-method status="PASS" signature="clickUserNameER()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickUserNameER" duration-ms="401" started-at="2017-02-10T11:22:08Z" finished-at="2017-02-10T11:22:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickUserNameER -->
-        <test-method status="PASS" signature="clickPasswordER()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickPasswordER" duration-ms="207" started-at="2017-02-10T11:22:08Z" finished-at="2017-02-10T11:22:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickPasswordER -->
-        <test-method status="PASS" signature="clickSubmitER()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickSubmitER" duration-ms="9257" started-at="2017-02-10T11:22:08Z" finished-at="2017-02-10T11:22:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSubmitER -->
-        <test-method status="PASS" signature="clickUserName()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickUserName" duration-ms="285" started-at="2017-02-10T11:22:17Z" finished-at="2017-02-10T11:22:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickUserName -->
-        <test-method status="PASS" signature="clickPassword()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickPassword" duration-ms="227" started-at="2017-02-10T11:22:18Z" finished-at="2017-02-10T11:22:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickPassword -->
-        <test-method status="PASS" signature="clickSubmit()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickSubmit" duration-ms="221" started-at="2017-02-10T11:22:18Z" finished-at="2017-02-10T11:22:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSubmit -->
-        <test-method status="PASS" signature="getCall()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="getCall" duration-ms="34658" started-at="2017-02-10T11:22:18Z" finished-at="2017-02-10T11:22:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCall -->
-        <test-method status="PASS" signature="clickCaseInfo()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickCaseInfo" duration-ms="703" started-at="2017-02-10T11:22:53Z" finished-at="2017-02-10T11:22:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickCaseInfo -->
-        <test-method status="PASS" signature="clickAgentScritping()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickAgentScritping" duration-ms="621" started-at="2017-02-10T11:22:53Z" finished-at="2017-02-10T11:22:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickAgentScritping -->
-        <test-method status="PASS" signature="clickNameSearch()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickNameSearch" duration-ms="8802" started-at="2017-02-10T11:22:54Z" finished-at="2017-02-10T11:23:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickNameSearch -->
-        <test-method status="PASS" signature="clickFirstRecord()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickFirstRecord" duration-ms="16321" started-at="2017-02-10T11:23:03Z" finished-at="2017-02-10T11:23:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickFirstRecord -->
-        <test-method status="PASS" signature="clickQualify()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickQualify" duration-ms="352" started-at="2017-02-10T11:23:19Z" finished-at="2017-02-10T11:23:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickQualify -->
-        <test-method status="PASS" signature="clickStartTransferButton()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickStartTransferButton" duration-ms="9048" started-at="2017-02-10T11:23:20Z" finished-at="2017-02-10T11:23:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickStartTransferButton -->
-        <test-method status="PASS" signature="clickTransferDropdown()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickTransferDropdown" duration-ms="14045" started-at="2017-02-10T11:23:29Z" finished-at="2017-02-10T11:23:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickTransferDropdown -->
-        <test-method status="PASS" signature="clickConsultButton()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickConsultButton" duration-ms="548" started-at="2017-02-10T11:23:43Z" finished-at="2017-02-10T11:23:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickConsultButton -->
-        <test-method status="PASS" signature="clickSearchMyFavButton()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickSearchMyFavButton" duration-ms="685" started-at="2017-02-10T11:23:43Z" finished-at="2017-02-10T11:23:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSearchMyFavButton -->
-        <test-method status="PASS" signature="clickEnrollmentqualtransfer()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickEnrollmentqualtransfer" duration-ms="563" started-at="2017-02-10T11:23:44Z" finished-at="2017-02-10T11:23:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickEnrollmentqualtransfer -->
-        <test-method status="PASS" signature="clickInstantCallTransfer()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickInstantCallTransfer" duration-ms="4423" started-at="2017-02-10T11:23:44Z" finished-at="2017-02-10T11:23:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickInstantCallTransfer -->
-        <test-method status="PASS" signature="clickInstantCallConference()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="clickInstantCallConference" duration-ms="4022" started-at="2017-02-10T11:23:49Z" finished-at="2017-02-10T11:23:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickInstantCallConference -->
-        <test-method status="PASS" signature="endACCCall()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="endACCCall" duration-ms="4844" started-at="2017-02-10T11:23:53Z" finished-at="2017-02-10T11:23:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endACCCall -->
-        <test-method status="PASS" signature="markACCCallDone()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="markACCCallDone" duration-ms="1639" started-at="2017-02-10T11:23:58Z" finished-at="2017-02-10T11:23:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- markACCCallDone -->
-        <test-method status="PASS" signature="endERCall()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="endERCall" duration-ms="2999" started-at="2017-02-10T11:23:59Z" finished-at="2017-02-10T11:24:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endERCall -->
-        <test-method status="PASS" signature="markERCallDone()[pri:0, instance:edu.apollogrp.tests.InternalTransfer.InternalTransfer@464bee09]" name="markERCallDone" duration-ms="954" started-at="2017-02-10T11:24:02Z" finished-at="2017-02-10T11:24:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- markERCallDone -->
-      </class> <!-- edu.apollogrp.tests.InternalTransfer.InternalTransfer -->
+        </test-method> <!-- erInboundCall -->
+      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
