@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 import microsoft.exchange.webservices.data.core.ExchangeService;
 import microsoft.exchange.webservices.data.core.enumeration.misc.ExchangeVersion;
@@ -122,10 +123,7 @@ public class EmailUtility {
 		String header = "<tr bgcolor='99CCFF'><TH ALIGN='CENTER'>Test class</TH><TH ALIGN='CENTER'>Duration </TH><TH ALIGN='CENTER' bgcolor='66FF33'>Status</TH></tr>";
 		
 		String body = "";
-		int allTotal = 0;
-		int allPassed = 0;
-		int allFailed = 0;
-		int allSkipped = 0;
+		
 		
 		String totalDuration = driver.findElement(By.xpath(".//*[@id='main-panel']/div[2]/a")).getText();
 		totalDuration = totalDuration.replaceAll("Took ", "");
@@ -135,8 +133,7 @@ public class EmailUtility {
 		String Total1 ="" ;
 		String Failed1 ="" ;
 		String Skipped1 ="" ;
-		String Passed1  ="" ;
-		String Time1 ="" ;
+	
 		String TestPackage1 ="" ;
 		
 		Thread.sleep(2000);
@@ -149,20 +146,23 @@ public class EmailUtility {
 			 Total1 	   = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+1+"]/td[9]")).getText();			
 			 Failed1   	   = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+1+"]/td[3]")).getText();
 			 Skipped1      = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+1+"]/td[5]")).getText();
-			 Passed1       = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[7]")).getText();			
-			 Time1         = driver.findElement(By.xpath("//*[@id='testresult']/tbody[2]/tr["+1+"]/td[2]")).getText();
+			
 			 
 			 System.out.println(TestPackage1+""+Total1+""+Failed1+""+Skipped1);
-			Thread.sleep(2000);
+			// Thread.sleep(2000);
+			Thread.sleep(100);
 			int packageSize =0;
 			
-			System.out.println("going to click UCPSmokeTests_CallType");
+			System.out.println("going to click UCPSmokeTests_CallType"+driver.getCurrentUrl());
 			driver.findElement(By.xpath(".//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).click();
 			
 			
-			System.out.println("after click packet size should be 2");
-			 packageSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).size();
+			driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+			System.out.println("should be in All tests--"+driver.getCurrentUrl());
 			
+			
+			packageSize = driver.findElements(By.xpath("//*[@id='testresult']/tbody[2]/tr/td[1]/a/span")).size();
+			 System.out.println("after click packet size should be 2--->"+packageSize);
 	
 			 
 			 if(packageSize>1){
@@ -181,8 +181,10 @@ public class EmailUtility {
 						
 					}
 
+				}else{
+					throw new Exception();
 				}
-			 
+			 System.out.println("body-------------"+body);
 			 
 			driver.navigate().back();
 			Thread.sleep(2000);
@@ -205,7 +207,6 @@ public class EmailUtility {
 
 	}
 
-	
 	
 	public String drawPieChart(String EMAILABLE_REPORT) throws InterruptedException  {
         int passi,  skipi,  faili;
@@ -267,6 +268,7 @@ public class EmailUtility {
         img=img.replaceAll("skiptest", skip);
         return img;
  }
+
 
 	public String getEnvironmentDetails(String build, String appUrl, String browserType) throws IOException, URISyntaxException{
 		StringBuffer sb = new StringBuffer();

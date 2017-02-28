@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType">
+      <class name="edu.apollogrp.tests.UCPSmokeTests.tEST_QualTransfer">
         <methods>
-          <include name="erInboundCall"/>
+          <include name="tearDown"/>
+          <include name="clickEnrollmentqualtransfer"/>
         </methods>
-      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType -->
+      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.tEST_QualTransfer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

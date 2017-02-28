@@ -20,7 +20,7 @@ public class GoogleHangout_FF {
 	//WebDriver driver = null;
 	public static WebDriver driverGoogleHangout = null;
 	//WebDriver driverGoogleVoice = null;
-	
+	public boolean bool =true;
 	
 	public  void setUp(String phonenumber){
 		System.out.println("i am in setUp");
@@ -29,6 +29,7 @@ public class GoogleHangout_FF {
         FirefoxProfile customProfile = new FirefoxProfile();
 		customProfile.setPreference("dom.disable_beforeunload", true);
 		customProfile.setPreference("plugin.default.state", 2);
+		customProfile.setAcceptUntrustedCertificates(bool);
 		driverGoogleHangout = new FirefoxDriver(customProfile);
 		
 		driverGoogleHangout.get("https://hangouts.google.com/");

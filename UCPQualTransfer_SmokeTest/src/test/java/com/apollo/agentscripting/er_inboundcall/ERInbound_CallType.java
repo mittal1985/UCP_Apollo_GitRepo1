@@ -16,22 +16,7 @@ import com.apollo.googlehangout.GoogleHangout_FF;
 
 //4804944778
 public class ERInbound_CallType {
-/*public static void main(String[] args) {
-	//http://qa-ucpas-rp.qaapollogrp.edu/UCP_Agent_Scripts_Phase1/WWGStart.jsp?WWGProcessFlowName=Outbound_Campaign&G_Agent_ID=ucp_acc2&G_Interaction_ID=0095028C9F7FB9B8&G_Config_Place=QA_9902&G_Contact_ID=0002QaBYABPT1VFA&G_Script_ID=&G_Script_RelationshipID=&G_Script_Query_Relationship=1&G_OR_ID=9887&G_DispCode=False&G_IWS_MarkDoneSupport=False&wde_theme=Default&G_IWS_BrowserVersion=11
 
-	WebDriver driver = new FirefoxDriver();
-	driver.get("http://qa-ucpas-rp.qaapollogrp.edu/UCP_Agen_Scripts_Phase1/WWGStart.jsp?WWGProcessFlowName=Outbound_Campaign&G_Agent_ID=ucp_acc2&G_Interaction_ID=0095028C9F7FB9B8&G_Config_Place=QA_9902&G_Contact_ID=0002QaBYABPT1VFA&G_Script_ID=&G_Script_RelationshipID=&G_Script_Query_Relationship=1&G_OR_ID=9887&G_DispCode=False&G_IWS_MarkDoneSupport=False&wde_theme=Default&G_IWS_BrowserVersion=11");
-	
-	driver.manage().window().maximize();
-
-	
-	//wait for page to load
-	driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
-	
-	driver.findElement(By.id(("qualify"))).click();
-
-
-}*/
 	WebDriver driver = null;
 	public String phoneNumber="4804944778";
 	public GoogleHangout_FF googleHangout= null;
@@ -243,10 +228,14 @@ public class ERInbound_CallType {
 	public void clickEndCall() throws Exception{
 	try{
 		System.out.println("in clickEndCall");
-		WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+		//WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
+		
 		if(webElement!=null){
 			webElement.click();
 		}else{
+			//WebElement webElement1 = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
+			
 			System.out.println("webelement is null");
 		}
 		driver.manage().timeouts().implicitlyWait(8000, TimeUnit.SECONDS);

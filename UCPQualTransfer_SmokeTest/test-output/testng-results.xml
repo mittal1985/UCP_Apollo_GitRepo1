@@ -1,64 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1156741" started-at="2017-02-21T17:36:37Z" finished-at="2017-02-21T17:55:54Z">
+  <suite name="Default suite" duration-ms="94090" started-at="2017-02-27T22:42:50Z" finished-at="2017-02-27T22:44:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1156741" started-at="2017-02-21T17:36:37Z" finished-at="2017-02-21T17:55:54Z">
-      <class name="edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType">
-        <test-method status="PASS" signature="qualficationTransfer()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c]" name="qualficationTransfer" duration-ms="171429" started-at="2017-02-21T10:36:37Z" finished-at="2017-02-21T10:39:28Z">
+    <test name="Default test" duration-ms="94090" started-at="2017-02-27T22:42:50Z" finished-at="2017-02-27T22:44:24Z">
+      <class name="com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="setUp" duration-ms="13158" started-at="2017-02-27T15:42:50Z" finished-at="2017-02-27T15:43:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qualficationTransfer -->
-        <test-method status="FAIL" signature="erInboundCall()[pri:0, instance:edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType@68c4039c]" name="erInboundCall" duration-ms="985279" started-at="2017-02-21T10:39:28Z" finished-at="2017-02-21T10:55:54Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[exception in checkContactTab]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: exception in checkContactTab
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.checkContactTab(ERInbound_CallType.java:219)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickCaseInfo(ERInbound_CallType.java:195)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getCall(ERInbound_CallType.java:165)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.getAgentReady(ERInbound_CallType.java:149)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickSubmit(ERInbound_CallType.java:113)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickPassword(ERInbound_CallType.java:94)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.clickUserName(ERInbound_CallType.java:72)
-	at com.apollo.agentscripting.er_inboundcall.ERInbound_CallType.setUp(ERInbound_CallType.java:49)
-	at edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType.erInboundCall(UCPSmokeTests_CallType.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickUserName()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickUserName" duration-ms="607" started-at="2017-02-27T15:43:03Z" finished-at="2017-02-27T15:43:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- erInboundCall -->
-      </class> <!-- edu.apollogrp.tests.UCPSmokeTests.UCPSmokeTests_CallType -->
+        </test-method> <!-- clickUserName -->
+        <test-method status="PASS" signature="clickPassword()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickPassword" duration-ms="333" started-at="2017-02-27T15:43:03Z" finished-at="2017-02-27T15:43:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickPassword -->
+        <test-method status="PASS" signature="clickSubmit()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickSubmit" duration-ms="254" started-at="2017-02-27T15:43:04Z" finished-at="2017-02-27T15:43:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSubmit -->
+        <test-method status="PASS" signature="getAgentReady()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="getAgentReady" duration-ms="11777" started-at="2017-02-27T15:43:04Z" finished-at="2017-02-27T15:43:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAgentReady -->
+        <test-method status="PASS" signature="getCall()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="getCall" duration-ms="48948" started-at="2017-02-27T15:43:16Z" finished-at="2017-02-27T15:44:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCall -->
+        <test-method status="PASS" signature="clickCaseInfo()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickCaseInfo" duration-ms="17085" started-at="2017-02-27T15:44:05Z" finished-at="2017-02-27T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCaseInfo -->
+        <test-method status="PASS" signature="checkContactTab()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="checkContactTab" duration-ms="145" started-at="2017-02-27T15:44:22Z" finished-at="2017-02-27T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkContactTab -->
+        <test-method status="PASS" signature="checkContactInformation()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="checkContactInformation" duration-ms="137" started-at="2017-02-27T15:44:22Z" finished-at="2017-02-27T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkContactInformation -->
+        <test-method status="PASS" signature="clickEndCall()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickEndCall" duration-ms="285" started-at="2017-02-27T15:44:22Z" finished-at="2017-02-27T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickEndCall -->
+        <test-method status="PASS" signature="clickDoneButton()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="clickDoneButton" duration-ms="1152" started-at="2017-02-27T15:44:22Z" finished-at="2017-02-27T15:44:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickDoneButton -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv@6a4f787b]" name="tearDown" duration-ms="185" started-at="2017-02-27T15:44:23Z" finished-at="2017-02-27T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.apollo.agentscripting.er_inboundcall.ERInbound_AgentScript_QAEnv -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

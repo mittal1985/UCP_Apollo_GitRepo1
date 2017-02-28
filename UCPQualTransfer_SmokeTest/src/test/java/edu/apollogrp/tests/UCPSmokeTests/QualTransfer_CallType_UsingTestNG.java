@@ -477,21 +477,30 @@ public class QualTransfer_CallType_UsingTestNG {
 		}
 		
 		@Test(priority=18)
-		public void clickEnrollmentqualtransfer(){
+		public void clickEnrollmentqualtransfer() throws Exception{
 			try{
-					driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
-					//driver.switchTo().defaultContent();
-					System.out.println("in clickEnrollmentqualtransfer");
-					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorItem1DefaultActionButton"));
+				driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+				//driver.switchTo().defaultContent();
+				System.out.println("in clickEnrollmentqualtransfer");
+				
+				WebElement webelement1 = driver.findElement(By.id("wweTeamCommunicatorItem0PartyNameTxt"));
+				if(webelement1.getAttribute("title").equalsIgnoreCase("Enrollment Transfer")){
+					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorItem0DefaultActionButton"));
 					
 					webelement.click();
+				}else{
+					System.out.println("check if EnrollmentTransfer is first in dropdown");
+					throw new Exception();
+				}
 				
-			}catch(Exception exception){
-				exception.printStackTrace();
-			}
-			
-		
+				
+				clickInstantCallTransfer();
+		}catch(Exception exception){
+			Assert.fail("exception in clickEnrollmentqualtransfer");
 		}
+		
+	
+	}
 		
 		
 		

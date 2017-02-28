@@ -176,6 +176,7 @@ public class ERInbound_AgentScript_QAEnv {
 	
 	@Test(priority=6)
 	public void clickCaseInfo(){
+		WebElement webElement1=null;
 		try{
 		
 			System.out.println("in clickcaseinfo-----");
@@ -186,7 +187,7 @@ public class ERInbound_AgentScript_QAEnv {
 				System.out.println("not null");
 			}
 			
-			WebElement webElement1 = driver.findElement(((By.xpath("//div[@class= 'wwe-data-text-value' and text()='Enrollment Inbound Direct']"))));
+			webElement1 = driver.findElement(((By.xpath("//div[@class= 'wwe-data-text-value' and text()='Enrollment Inbound Direct']"))));
 			
 			if(webElement1!=null){
 				System.out.println("not null");
@@ -268,8 +269,10 @@ public class ERInbound_AgentScript_QAEnv {
 	public void clickEndCall(){
 	try{
 		System.out.println("in clickEndCall");
-		WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
-		if(webElement!=null){
+		//WebElement webElement = (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+				WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
+				
+				if(webElement!=null){
 			webElement.click();
 		}else{
 			System.out.println("webelement is null");

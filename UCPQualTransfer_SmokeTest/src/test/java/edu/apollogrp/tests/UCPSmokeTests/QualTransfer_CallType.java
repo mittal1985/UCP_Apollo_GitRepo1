@@ -40,7 +40,7 @@ public class QualTransfer_CallType {
 			customProfile.setPreference("dom.disable_beforeunload", true);
 			driver = new FirefoxDriver(customProfile);
 
-			googleHangout_FF = new GoogleHangout_FF();
+			
 
 			// driver.get("http://dlaxucww001.devapollogrp.edu:8080/ui/ad/v1/index.html");
 
@@ -234,31 +234,19 @@ public class QualTransfer_CallType {
 	public void getCall() throws Exception{
 		try{
 			
-		googleHangout_FF.setUp(phoneNumber);
+	
 		int count = 0;
 		
-		System.out.println("after getCall googlehangout---->");
-		WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("agent-desktop-container-title"))));
-		while(webElement==null){
-			count = count++;
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		}
-	
-		if(webElement!=null){
-			System.out.println("webElement is now not null");
-		}
 		
 		/*drop down click working*/
 		System.out.println("going to click dropdown");
 		driver.findElement(By.id("wweAgentSwitchStateButton")).click();
 		driver.findElement(By.xpath("//span[@class='presence-text']")).click();
-		//click on Ready using xpath , at present xpath not there in my system
-		//i think once clicked ready button its in Ready status for quite long
 		
 		
-		
-		
-		
+		googleHangout_FF= new GoogleHangout_FF();
+		googleHangout_FF.setUp(phoneNumber);
+		System.out.println("after getCall googlehangout---->");
 		
 		clickCaseInfo();
 		}catch(Exception exception){
@@ -304,7 +292,7 @@ public class QualTransfer_CallType {
 			
 			
 			webElement.click();
-			driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			System.out.println("going out of clickagentscripting");
 			//webElement.click();
 			clickNameSearch();
@@ -327,7 +315,7 @@ public class QualTransfer_CallType {
 					lastNameElement.sendKeys("phoenix.11");
 			
 	
-					Thread.sleep(4000);
+					Thread.sleep(5000);
 					 ((JavascriptExecutor)driver).executeScript("scroll(0,400)");
 					 Thread.sleep(4000);
 					System.out.println("going to click after wait");
@@ -475,9 +463,19 @@ public class QualTransfer_CallType {
 					driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 					//driver.switchTo().defaultContent();
 					System.out.println("in clickEnrollmentqualtransfer");
-					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorItem1DefaultActionButton"));
 					
-					webelement.click();
+					WebElement webelement1 = driver.findElement(By.id("wweTeamCommunicatorItem0PartyNameTxt"));
+					if(webelement1.getAttribute("title").equalsIgnoreCase("Enrollment Transfer")){
+						System.out.println("title is matched going to click on it");
+						WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorItem0DefaultActionButton"));
+						
+						webelement.click();
+					}else{
+						System.out.println("check if EnrollmentTransfer is first in dropdown");
+						throw new Exception();
+					}
+					
+					
 					clickInstantCallTransfer();
 			}catch(Exception exception){
 				Assert.fail("exception in clickEnrollmentqualtransfer");
@@ -491,7 +489,7 @@ public class QualTransfer_CallType {
 		
 		public void clickInstantCallTransfer() throws Exception{
 			try{
-					driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+					driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 					//driver.switchTo().defaultContent();
 					System.out.println("in clickInstantCallTransfer");
 					WebElement webelement = driver.findElement(By.id("wweVoice1CompleteConferenceButton"));
@@ -510,7 +508,7 @@ public class QualTransfer_CallType {
 			try{
 					driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 					//driver.switchTo().defaultContent();
-					System.out.println("in clickInstantCallTransfer");
+					System.out.println("in clickInstantCallConference");
 					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorActiveItem0DefaultActionButton"));
 					
 					webelement.click();
@@ -525,17 +523,18 @@ public class QualTransfer_CallType {
 		
 		public void endACCCall() throws Exception{
 			try{
+				System.out.println("in endACCCall");
 			int count = 0;
-			WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-end-call"))));
-			while(webElement==null){
-				count = count++;
-				driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-			}
+			WebElement webElement = (new WebDriverWait(driver, 500)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-end-call"))));
+			
 		System.out.println("going to click end button on ACC side");
 		
 		if(webElement!=null){
 			//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
 			webElement.click();
+			}else{
+				System.out.println("webElement is null");
+				throw new Exception();
 			}
 		
 		markACCCallDone();
@@ -547,7 +546,8 @@ public class QualTransfer_CallType {
 		
 		public void markACCCallDone() throws Exception{
 			try{
-			int count = 0;
+				System.out.println("in markACCCallDone");
+					int count = 0;
 			WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-mark-done"))));
 			while(webElement==null){
 				count = count++;
@@ -569,7 +569,8 @@ public class QualTransfer_CallType {
 			System.out.println("going to click end button on ER side");
 			int count =0;
 			try{
-				WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+				//WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+				WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
 				/*while(webElement==null){
 					count = count++;
 					driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
