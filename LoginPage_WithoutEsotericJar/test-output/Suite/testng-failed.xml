@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.mkyong.testng.examples.group.TestGroup"/>
+  </listeners>
+  <test name="final(failed)">
+    <classes>
+      <class name="com.mkyong.testng.examples.group.TestGroup">
+        <methods>
+          <include name="cleanDB"/>
+          <include name="runFinal"/>
+          <include name="runSelenium"/>
+          <include name="setupDB"/>
+          <include name="testConnectMsSQL"/>
+          <include name="runSelenium1"/>
+          <include name="testConnectOracle"/>
+        </methods>
+      </class> <!-- com.mkyong.testng.examples.group.TestGroup -->
+      <class name="com.mkyong.testng.examples.group.TestSelenium">
+        <methods>
+          <include name="runSelenium1"/>
+          <include name="runSelenium"/>
+        </methods>
+      </class> <!-- com.mkyong.testng.examples.group.TestSelenium -->
+    </classes>
+  </test> <!-- final(failed) -->
+</suite> <!-- Failed suite [Suite] -->

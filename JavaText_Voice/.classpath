@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/OSGi%Minimum-1.2"/>
+	<classpathentry kind="lib" path="freetts.jar"/>
+	<classpathentry kind="lib" path="cmu_time_awb.jar"/>
+	<classpathentry kind="lib" path="cmu_us_kal.jar"/>
+	<classpathentry kind="lib" path="cmudict04.jar"/>
+	<classpathentry kind="lib" path="cmulex.jar"/>
+	<classpathentry kind="lib" path="cmutimelex.jar"/>
+	<classpathentry kind="lib" path="en_us.jar"/>
+	<classpathentry kind="lib" path="freetts-jsapi10.jar"/>
+	<classpathentry kind="lib" path="mbrola.jar"/>
+	<classpathentry kind="lib" path="jsapi.jar"/>
+	<classpathentry kind="lib" path="tritonus-share-0.3.7-1.jar"/>
+	<classpathentry kind="lib" path="javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="twilio-java-sdk-3.3.12.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/jackson-annotations-2.4.3.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/jackson-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/jackson-databind-2.4.3.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/jaxb-api-2.2.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/jjwt-0.4.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/joda-time-2.5.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/stax-api-1.0-2.jar"/>
+	<classpathentry kind="lib" path="lib_twilio/twilio-7.1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
