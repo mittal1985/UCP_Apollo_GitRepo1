@@ -512,6 +512,7 @@ public class QualTransfer_CallType {
 					WebElement webelement = driver.findElement(By.id("wweTeamCommunicatorActiveItem0DefaultActionButton"));
 					
 					webelement.click();
+					Thread.sleep(10);
 					endACCCall();
 			}catch(Exception exception){
 				Assert.fail("exception in clickInstantCallConference");
@@ -536,7 +537,7 @@ public class QualTransfer_CallType {
 				System.out.println("webElement is null");
 				throw new Exception();
 			}
-		
+		Thread.sleep(10);
 		markACCCallDone();
 		
 	}catch(Exception exception){
@@ -548,7 +549,7 @@ public class QualTransfer_CallType {
 			try{
 				System.out.println("in markACCCallDone");
 					int count = 0;
-			WebElement webElement = (new WebDriverWait(driver, 5000)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-mark-done"))));
+			WebElement webElement = (new WebDriverWait(driver, 500)).until(ExpectedConditions.elementToBeClickable((By.className("wwe-sprite-mark-done"))));
 			while(webElement==null){
 				count = count++;
 				driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
@@ -559,6 +560,7 @@ public class QualTransfer_CallType {
 			//Generic_Functions.WritePass(driver, currentSuit, folder, "Verify whether ER has received the call", "ER should have received the call correctly", "ER has received the call correctly");
 			webElement.click();
 			}
+		Thread.sleep(10);
 		endERCall();
 			}catch(Exception exception){
 				Assert.fail("exception in markACCCallDone");
@@ -569,8 +571,8 @@ public class QualTransfer_CallType {
 			System.out.println("going to click end button on ER side");
 			int count =0;
 			try{
-				//WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
-				WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
+				//WebElement webElement = (new WebDriverWait(driverER, 500)).until(ExpectedConditions.elementToBeClickable((By.id("wweVoice1HangupButton"))));
+				WebElement webElement = (new WebDriverWait(driverER, 500)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[starts-with(@class,'wwe-button-hangup')]"))));
 				/*while(webElement==null){
 					count = count++;
 					driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
@@ -583,6 +585,7 @@ public class QualTransfer_CallType {
 				webElement.click();
 				}
 			System.out.println("going to call markERCallDone");
+			Thread.sleep(10);
 			markERCallDone();
 			}catch(Exception exception){
 				Assert.fail("exception in endERCall");
@@ -593,7 +596,7 @@ public class QualTransfer_CallType {
 		public void markERCallDone() throws Exception{
 			try{
 			int count = 0;
-			WebElement webElement = (new WebDriverWait(driverER, 5000)).until(ExpectedConditions.elementToBeClickable((By.id("wweBundle1CloseButton"))));
+			WebElement webElement = (new WebDriverWait(driverER, 500)).until(ExpectedConditions.elementToBeClickable((By.id("wweBundle1CloseButton"))));
 			/*while(webElement==null){
 				count = count++;
 				driverER.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);

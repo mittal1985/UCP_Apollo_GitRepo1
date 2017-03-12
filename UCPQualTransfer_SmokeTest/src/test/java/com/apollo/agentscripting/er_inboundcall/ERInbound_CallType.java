@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.apollo.ga_connection.Connect_GenesysAdmin;
 import com.apollo.googlehangout.GoogleHangout_FF;
 
 //4804944778
@@ -21,6 +22,17 @@ public class ERInbound_CallType {
 	public String phoneNumber="4804944778";
 	public GoogleHangout_FF googleHangout= null;
 	
+	
+	public void ga_setUp() throws Exception{
+		try{
+			
+			Connect_GenesysAdmin.createContact("DP_Enrollment","ucpeawe2");
+			setUp();
+		}catch(Exception exception){
+			Assert.fail("exception in ga setUp");
+		}
+				
+		}
 	
 	public void setUp() throws Exception{
 		try{

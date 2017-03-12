@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
+	<classpathentry excluding="java/|resources/" kind="src" path="src/test"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
 	<classpathentry kind="lib" path="ews-java-api-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/apptemplate.jar"/>
+	<classpathentry kind="lib" path="lib/comappblock.jar"/>
+	<classpathentry kind="lib" path="lib/commons.jar"/>
+	<classpathentry kind="lib" path="lib/configurationprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/connection.jar"/>
+	<classpathentry kind="lib" path="lib/contactsprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax.xml.bind.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/kvlistbinding.jar"/>
+	<classpathentry kind="lib" path="lib/kvlists.jar"/>
+	<classpathentry kind="lib" path="lib/logging.jar"/>
+	<classpathentry kind="lib" path="lib/managementprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/messagebrokerappblock.jar"/>
+	<classpathentry kind="lib" path="lib/netty-3.6.5.Final.jar"/>
+	<classpathentry kind="lib" path="lib/openmediaprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/outboundprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/protocol.jar"/>
+	<classpathentry kind="lib" path="lib/protocolmanagerappblock.jar"/>
+	<classpathentry kind="lib" path="lib/reportingprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/routingprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/switchpolicy.jar"/>
+	<classpathentry kind="lib" path="lib/system.jar"/>
+	<classpathentry kind="lib" path="lib/voiceprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/warmstandbyappblock.jar"/>
+	<classpathentry kind="lib" path="lib/webmediaprotocol.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.53.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
