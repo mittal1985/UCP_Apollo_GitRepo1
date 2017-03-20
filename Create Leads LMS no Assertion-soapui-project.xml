@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="57230887-dda2-443d-a7e4-df27f34529ea" activeEnvironment="Default" name="Create Leads LMS no Assertion" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="8af7b8fe-4c42-45fe-a3ea-f81664a973de" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://st-coreplatform.apollogrp.edu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint></con:endpoints><con:resource name="Leadmanagement" path="/servicegateway/rest/rm/v1/leadmanagement" id="8ccea30e-720c-46fa-92df-681c9f862a22"><con:settings/><con:parameters/><con:method name="Leadmanagement" id="297b6e44-b971-4b7d-b990-ae3c8ebaf9d4" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:lead="https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement">lead:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>202 201</con:status><con:params/><con:element xmlns:lead="https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement">lead:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500 404</con:status><con:params/><con:element xmlns:lead="https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement">lead:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>401</con:status><con:params/><con:element>response</con:element></con:representation><con:request name="Request 1" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6Ikw2dlRRRzdCMTFTWC85eVZWNHExcWc9PSIsImVuY3J5cHRlZCI6IjJWUDdnWUVieElPRnd2anl2eXZURVpGdy9UWjZabDRIL3loa3dzVUxPV2tKdkM3bnc0NDkyZG1SbDFQTTcvaXQ0bTZDdlQzQ0JrY2U1ckc2T2RCM3R6ZGswb1ZUUnJzUmVqZW9HNHp3MWNtMFRLc09HTXBEam5RSVEyNjFDbTNPR2c3eTc1cXJWSlM2NjBtNzZHSzR3UlplNTl4cDlKSmNuWlFVMlFJeHhnaDRDcE02WXdLK00zYlUyLzUzYlBjUlpScjhGL012SDhhMTRPQnRKcVpLZnQ0dWJkaE91czk0dUd0dmlpMEtqZmZSYkhZNEcrVEtUL05MSVBFK3BuNVhLd0FFZzdhelNFV1FrZWhYZ01HZ1FXbTd1MnhHcmZCNHNGSmhkOXhIQ2RTelJOTU1GRlRJNlNDcm9GTC9saGt2dDdmRFN0dWRydFpEazBvUTdwdXEyQkRMck41OCtWaTF2SmFPdUlORVZuZFpsdVFOemNBTmk1WjRRa09GcC9xdy8xeHArdnhoV2lsWWN5RjhUMEJzcUZBQmV6WjUraEFnQ1JaeTlJSjZONHhlZGM0RDRVNWF2RDZOS2Zic0IzYXVYQ0J5ZmN5VTZBaUQ4YThkbGVhZGowYnlrVmxTc3hyWVMvT01rRGkvanhvR3FMSXh6d1pxbjhacU1KUUpNeWZiWWtoUUlzbTVhSkliS0ROejA5bHAydDJ3bGFrQ0U3WmhidjlHSlFWMnRwVkFFZzdOOEdtR1JxRjFrZnBybU93SXI1cm1lNGRLTnVsNExkYWV0dU5sYXZJa0RUamQ3VURnMmFNU1MyQWF3bmx0VnBzNWFMeHdzeTlyd2dPaml6RXJESHFSNWdoMTR2eDY5dFJReDBaN1Ywc2xhRW8xN09SZmloMitaZVpGWDFNPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "BSB",
+            "level": "Undergraduate",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "sdfsdfsdf",
+            "lastName": "asdasdfas"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "16573+SOAP+St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "asdfasdfgvet2536ys@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "602",
+            "phoneNumber": "5571399",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Alumni Lead" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InB1VXJTSkhXa3NmWWhpQ2ExeE1DMUE9PSIsImVuY3J5cHRlZCI6IllCWWZQbFAwUU93S3l0ZVlzMDg4MjFaaHdtbVZybUFHNnpoNEtnTkRNQWdSK0VSZG9PQzRreFQ2Z2s1a2JmSEN2Q2RzUFIyM2luUlNiRkZqS2N6Z3dtY2ZSdGtnWlNtaHl3ay83dExqT3hBbCs1WnJyajZldTIwSFpaMG1hNFRqK2ttQW5nN0V6TENzbUpnNllkOWRSb2JjYk1KZVdMVmVqa0NwSUtYNmRWeUtVM05rdEtKSG50S0FhdysvOTQyMzYvVXM1OEUzQ1FOMzNjZjZHVjArL3ROYzE2aUVHUkdwR2wxeUZ3RUozaHRlK3hSTTFVaGtoVmZKd0hQSXdseEFkckhia05jZndqRmJGTEtOYXpjQzlyOG5BbkU5aTJCSG13MFNRSThKWHh1V1IwQTg5MjFqbkNVdVVlTkpvb0RLU282bytGdXhwcTRlSlV1UCt5aXF1eHFOQm85MUdsRm1jVVdrYVZWOFdxTk45alRPdTUxdk0yZE15R015WVhNUWYzZ1JjQWdWa09QcUJ4R01JaUZGRjg3SlpMOXkvVXJKUzZTUlpaOFlaTCs0QmFZYmpIVm5mc3BiRXN4Y0FDTXFhbFhBc2J0cTR0dEMwcjlxejNJNWoxanR0OTdWc2NibUhiamk0eDNnZVpOaFVBaXorVnZBM3FWTjZRUW9JYUczYnZPanVwbUxkck9xOTc2WVZsVWs0bDl6TUlDQ1EzNXQ2SExrMTZrUGtCaUcrTlFOTkpvOGM4cnFWbG43WEo1OVk3bThPUERCdHhxV0ZzRmwxT2VWTFZoVUtrU1dkZ3k1dERNTlR2aDFSZnZxdDZFbDdpS2RLVmFYNDFCZjVtWWF6cUd4RzJyZFM4TVR1MXViVzJ4Zkt3NVJqRnA3UGpKc3VYbmZ4eTNzSFljPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "rfi": {
+        "program": {
+            "code": "MBA",
+            "level": "Graduate"
+        },
+        "campus": "ONLINE",
+        "campaign": "ALUM",
+        "source": "ADG"
+    },
+    "ownerNTLogin": "uuser",
+    "identities": [{
+        "value": "f10c0502-e6e9-4eda-b540-b7a26ac9a09a",
+        "type": "PROFILE_ID"
+    }],
+    "appContext": "SRMALUMNI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="fbc8f9ce-6f57-433d-b95b-3d3a1057369f" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://apollogrp--TEST.cs15.my.salesforce.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://apollogrp--TEST.cs15.my.salesforce.com</con:endpoint></con:endpoints><con:resource name="V3" path="/services/apexrest/SfRestRouter/v3/" id="d7be7ee0-3d48-42a5-b2e5-cb5c4a4516ed"><con:settings/><con:parameters/><con:method name="V3" id="0525f428-fe4f-4572-a7a0-27c00d6bd44a" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element>Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="33ea5ff2-7284-4235-ae1c-8345f2dcbca1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://apollogrp--TEST.cs15.my.salesforce.com</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="9ebaea1e-034f-437e-bc82-25caf8572b7d" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://test.salesforce.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://test.salesforce.com</con:endpoint></con:endpoints><con:resource name="Token" path="/services/oauth2/token" id="0bff1b3f-258a-46f1-a75a-8dd353cddd5f"><con:settings/><con:parameters><con:parameter><con:name>grant_type</con:name><con:value/><con:style>PLAIN</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>client_id</con:name><con:value/><con:style>PLAIN</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>client_secret</con:name><con:value/><con:style>PLAIN</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>username</con:name><con:value/><con:style>PLAIN</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>PLAIN</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Token" id="371c972d-8eed-4748-b3a6-7b1a0cc1c844" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:tok="https://test.salesforce.com/services/oauth2/token">tok:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="fa17114a-6aa7-4efe-ba64-2a4a224e6338" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://test.salesforce.com</con:endpoint><con:request/><con:originalUri>https://test.salesforce.com/services/oauth2/token</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="username" value="qatester79@apollogrp.edu"/>
+  <con:entry key="client_secret" value="3986284512304774958"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="client_id" value="3MVG9dPGzpc3kWyfriwoTGFDbtSioJDBHXqJDeowIGIr2WS5Zp0J3ctqpYzWp7Ocp.5iILFeUKertS_qTVsHE"/>
+  <con:entry key="password" value="QAtest2011"/>
+</con:parameters><con:parameterOrder><con:entry>grant_type</con:entry><con:entry>client_id</con:entry><con:entry>client_secret</con:entry><con:entry>username</con:entry><con:entry>password</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="dd77e81f-410c-489f-bd69-c779db3f3e6f" name="Create Lead LMS"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f0b5fbd0-11d2-428e-85f5-90f2a92276d1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="General Lead" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="392aeb92-5047-40da-be23-603d257a7cca"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="7e65f368-8956-45dd-bbf5-23c7b8e8d94b"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="21316479-b08f-4ebe-9d3a-84a6589e4535"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="a7f74d1f-dcd8-42d3-8496-ddbed63c3a4e"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="5b05c3db-13c4-4b4f-8fb5-7777b20c37b0"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="ef94c755-fbfd-4bd2-8e22-9f120e1a9ea2"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Ethan</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Kathleen</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>2016630104220</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>104220</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="e959cb76-561e-47ae-9aa8-baf54e5fc36f"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6IjNUUW9QNmV6WXN3eXN3K0tuZmFWWnc9PSIsImVuY3J5cHRlZCI6InlwcGFRemxmU01sYlB3QmdRQ0N3OFpBQWhBdmxiRE83VTNacGlyRDlzMTJXMGlUb3ErNzBYdEdvdTBvRjVqajZlZ1dGMGZnM3ZTenMyam9vb01HeHVQZ25LWHIzZmlxUUp6U1pKanhxajFreUhiRzF3QkF5NXc4blB2M3Jzemh6eUUzS2VGaDNhdlM3NUptWXhyU3lXWUY0OWR0cmhYeE1zQnIrMm9wQjhzK3Z5K1ZEZ1FhdS9qV3lsWkJjazE4c01UMG9NemRoOUhlNkV2RE1IYmpUVWt1Rk9wcC92QWFrUTMwRUY0ekp2RkhWOE5RRENERi9SOGtHYVBQRENGcURNK0ZyMVpKcjJMTlp3bTB1Z1M4WFVYaVl6REJPcitkNWlYNkdZWE1HQXFwUmEwOWZiQjVhTjh4eW9TS00ybFpiYStGTjc0NWtwOElRQzdMajd4WXB3eGJsVFB3blBMaVpWdmx4K0huTFh3ejJDdkZoYWxGcldSWTcrM2w0dUQ1aitQV0pzb1hWWSsrbmhyd3RuaDh5eDk5UVhCcUxvQTVYYW42dFNkNlhSRWFIK3hWN1BKK2FJcWZhVkJHZTM0bWNENnZ2MDhBWWJEbng3czJkaE1JeWFHdktjTng0aGs2MnB2b2N0dTl4QlVuRmxqZ1NFYTBaSXlwcDYwR1J4ZFVPc0dxVk9idmVOS1ludDREVXR3TGZOQmk5Tk1HZ2paVk9NMlZBSmZ1TEpmL2tjOGQwa3BRRmJJdkNjTFFmZW84dDJRMnRnM3lkdGRyZUJwdW9vRThXcDAzOXo5c09KbmNVZ0F0aWVDZ3ZxZDNIb1VDb3hTYTg4enJnMjl1NmVZOWt4T0hiUGVGeisyM3VyQWtwYk92bnZhNmZjWldPcGh3OTFoeUNsYUwwYzl3PSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Ground",
+        "educationLevel": "Earned Bachelor's Degree",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Tempe",
+            "stateProvince": "AZ",
+            "postalCode": "85282",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com",
+            "isPrimary": true
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US",
+            "isPrimary": true
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="e7d1fbc3-fb43-4910-9baa-f65f40a4dc5d" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaols.phoenix.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("Request 1").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="851a5f70-9835-47c2-90e8-d806b8e2719a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Bachelors" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="db61bb26-fd1c-4f9b-99ce-370cc9ee8c89"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="d5cf0e59-9f8d-45de-837f-d3ead060790d"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="433e18ed-5892-4d79-b681-b56334ab6dad"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="4842450c-e662-4846-a6e1-aae996d9d95f"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="dbe59294-8e40-4e5e-9424-a957e663e581"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="511e90a1-8a11-4871-8836-89528986c97e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Michael</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Linda</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201631410123</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>10123</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="d294ed00-67c4-4468-bd54-1cf353dc20f1"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6IjhERzBvSmFSUUtydUVhZ1JDRjE1d0E9PSIsImVuY3J5cHRlZCI6ImtGcmoxM2YyQ3htak1kdldlWGF2UWNKakFVSXg1SDN3WGhMdFU0d3NLUU5LN3NiK0RlSC9rWFZ2dUhzSy9kS0pRNjVQTWhTbzFPa1ZRa3pZSVRzQTZuSGVXSG9kR1IyeWJSUHB0VlVzdW00dVRvdzY1N0dmRUh6MThQeWdpclExR0J3SVlPU29zVUdHeU02djNIVTAwYXBkRTZPRDdrNEZhWFc5NW9iN0pKMzllelJKeE5mcEFSc3hSellxVG5JZ0NzUDhyVlJ2VnY0VkVOZHY0L0puNlhhVlloQ2tvRTcwVzY1ZkIrYi9JQTA0UE5rL1luZllNVm9yTEtlRCt3NW5WWi9Ubk9VeDdMMFJ4RGN3dXlmN3prUWswZ3lyOW05K0JreW52TXJITC9CV3NHbXhlMlFUamlnQ3VkTVdDcTB1VHZrUzN2ekM4Tms3dllLTm1EV2VIcTZDVG9YZkhFSWl0K1VqQ2FJVGl4cTltVkRYbUxXL0EyVnFyM2x0RWgxNUtuTHR4UXdPYXhDQUNtU0h3YmFRVkZoejJyMnFpdVZ2bXdUQm1XMmNxZGRiOTZLSWkrbHdJbnBiVTAzWnVQTlBrUG9IUjhxcHNrUTNMLzByckQ3ZGdubkUwai9qVmM4QytEaHFmRU52OERacmZyY3YvQ0s2K1JpSUt1TmVQeTZaczY1SWRHSlpRZzMwNFdqZks2RFpWOFp2ZjhyZUxTM2ZUSExMZEI5Z1AwQmhkUisxbHZZa0hLZElKWVdaVUtoRjJ4TlZURGw2RTA1dFNGNjNSTjdrOFZORTRzRjFMdDZLRjRVd3dEbUJVT1ljOWQ4ZmM3SEplUEw4ZnYwc0NqMGZybXVhSC9DMXViOVlaOTN3TnRZTVI0QTNEL0g3L291K003RUg3Y3F3RndrPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "BSB",
+            "level": "Undergraduate",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "726",
+            "phoneNumber": "5557815",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="20fe06dc-9419-4d36-9cae-572942d129a3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Graduate" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="abd1e700-b171-47d8-b4a0-cfe02676a75a"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="76a10a5a-674a-493b-9c26-6c204a49748f"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="cf554710-1e6b-4c35-9f01-e60028722f18"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="562431a4-d37a-4674-aa98-6149b73642ef"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="6bad57f6-a5d5-423a-89d8-c95dccd13dbb"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="dff8367d-43a9-4cfc-b3d7-ef1354a3143d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Juan</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Alice</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>20162415539</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>15539</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="819eb095-7344-43ad-b159-43b350ea828a"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InBXSGR2OVJDUHdSbFZPNjFGZlRBUXc9PSIsImVuY3J5cHRlZCI6ImNwUFR2cDZUckVZOERQenNwRkFIVUlPVU5NMk42YmVqOVdLV0xVZlplYnU3Vk1aQUJLOCthNWpwSXlHd2RKWjlkK1NrN2J0TmFQcjF1Z25LaENXY2R3M2dBdWtNNFRHQ2R5SUlDc0Yxa1AySk10Y1dVdmlzbVliSXR3SEdkZHJnbjVXbzJxSlQvOWtEbEorUkc1TGNobUpZWVlaWkFBeksrMnVHZno2dW9XcXJZTzdqU2xqMDlINEFlUGhBUkN5ck9EZDE4UzRlaTdyUThwNzcrVUtmTE0xZytleERGektzL2RPUEszUVRJMTFEY2c1a3Bua09MU0tRS0JWU2x3Si8xVmRyckdEQWpQRUNmN2FmOGlRY1NaZG9KbTlSVFk3WCtwbUpLcG5OWHFRWkUrYnYwdlNKa3ErejZOeHp1YXVHRDMxcTVkdUdLdmVuSGptZS9BNTFwTWhPSEpVVDNxWlBZSWlIMDlDVEl5UGUvblVheU9iTVFtN2tLek9jQ0R2OS9MRGkxS25UUGJCcW9qQ0ZGY3JOMEUwUjdvWUdicjBsc0hUbGk3enFFNFVBeHRMSFFEbjloSzRXSldYbmt5R1dLNHRPZVExQmY1eDR3REl3N0tsbkFxOFF5a3RrUkdiVDNqeUZTT3ROY1IyS3ZIK2Yrb3JkcW11RGlQdHlIYmtQUWJ4VTd4bS9TeWJRWE84VUpubDkvY2Fuc2hDZit4L3MzSnpYcWhUK0Q0UFhGNXorUEhwc0ZhNFlwSThoZVB6WWh3QWJjVEhGNEF3eUd4bGtzZWFUVlJEa3I2alVsUWhKWjU1eTcwdGY5UUVoQzV6eWZFR2toTE1PRW5oMXZTZWJlbU9xUlJuZXd6cUowMkh3a2VlMitsUGVYdHpJdERxK0JQaDl3V2lCamxjPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "MBA",
+            "level": "Graduate",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="09f56fe6-9e2d-44c8-99b3-9b2b000772aa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Doctoral" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="cc298999-4047-42c2-aa9c-00b1a0959ef0"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="0c96606d-40db-4d88-a50e-66d4b17d8bdc"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="67f1ca29-9649-46dc-a991-5918f98ca76c"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="b5ec1abd-c14b-4186-a74b-15725e9f3c32"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="4a8a2965-44b1-482e-bd14-415275265400"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="9d486c85-a4b4-42bf-a2ae-ecb36b4008ce"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Kenneth</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Ruth</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>20162415612</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>15612</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="5929cccd-9cf1-4544-bed2-8716cf3b4659"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InBXSGR2OVJDUHdSbFZPNjFGZlRBUXc9PSIsImVuY3J5cHRlZCI6ImNwUFR2cDZUckVZOERQenNwRkFIVUlPVU5NMk42YmVqOVdLV0xVZlplYnU3Vk1aQUJLOCthNWpwSXlHd2RKWjlkK1NrN2J0TmFQcjF1Z25LaENXY2R3M2dBdWtNNFRHQ2R5SUlDc0Yxa1AySk10Y1dVdmlzbVliSXR3SEdkZHJnbjVXbzJxSlQvOWtEbEorUkc1TGNobUpZWVlaWkFBeksrMnVHZno2dW9XcXJZTzdqU2xqMDlINEFlUGhBUkN5ck9EZDE4UzRlaTdyUThwNzcrVUtmTE0xZytleERGektzL2RPUEszUVRJMTFEY2c1a3Bua09MU0tRS0JWU2x3Si8xVmRyckdEQWpQRUNmN2FmOGlRY1NaZG9KbTlSVFk3WCtwbUpLcG5OWHFRWkUrYnYwdlNKa3ErejZOeHp1YXVHRDMxcTVkdUdLdmVuSGptZS9BNTFwTWhPSEpVVDNxWlBZSWlIMDlDVEl5UGUvblVheU9iTVFtN2tLek9jQ0R2OS9MRGkxS25UUGJCcW9qQ0ZGY3JOMEUwUjdvWUdicjBsc0hUbGk3enFFNFVBeHRMSFFEbjloSzRXSldYbmt5R1dLNHRPZVExQmY1eDR3REl3N0tsbkFxOFF5a3RrUkdiVDNqeUZTT3ROY1IyS3ZIK2Yrb3JkcW11RGlQdHlIYmtQUWJ4VTd4bS9TeWJRWE84VUpubDkvY2Fuc2hDZit4L3MzSnpYcWhUK0Q0UFhGNXorUEhwc0ZhNFlwSThoZVB6WWh3QWJjVEhGNEF3eUd4bGtzZWFUVlJEa3I2alVsUWhKWjU1eTcwdGY5UUVoQzV6eWZFR2toTE1PRW5oMXZTZWJlbU9xUlJuZXd6cUowMkh3a2VlMitsUGVYdHpJdERxK0JQaDl3V2lCamxjPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "DBA",
+            "level": "Doctoral",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="9fa737a8-4a5e-4b04-b452-e410d2117bd6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Non Degree" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="2ca3bbc1-7e7b-424b-8aea-4a4a3d2cdd35"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="f5c62319-4cd8-4e55-9c41-641359e3ae86"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="7aac75cb-be6b-4ebb-aefa-3329f04cf5e0"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="54aca649-4135-44f1-ac68-6bd5a786e1e1"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="9cd2d560-1e08-48ae-9ee1-8981145d58c1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d4a09c2d-2ab3-4b8a-a651-8ec939aef7ca"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Christian</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Debra</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>2016216774</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>774</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="24c6fad5-8850-42b8-a2bd-b2ff2bbda870"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InNsSUN6NVlOWjIxY2ExQnI2WGxQb0E9PSIsImVuY3J5cHRlZCI6IkVRZ3huZllvZ21ZRHdjSzJKaEhVTFdOUUJ2M2liaU5jMTB3QnMyZTRNVit3WElSZzJaT2E3NFdZRXhVUFlOdEVlVzVtU05YeFBZQ09BTHl5VW9VYUZHQ2F4aEdjZFlvVDZlR213Uk5DVWxUYTJJN0dvOEVHWTlwQmdzNEV3ZzFmam5EU3B4SE1pOGZFcWt4MEVndXJmSmlaUW1nSzZmZ0UxYThnbHplWGpxbXN0a2RBb3ZvOTZwYjdZNVZRYkNmd2dUTFc4N2g2Wk44MDZDS0JsSEpqdVRVZk5mZ1BZUTU3cVlKNmhmcVp6VlJCZmNkdkUrMmJtekpHNDN6a2tzWlM5KzlaVWNXemEvUVZGdC8wbTJ5SEd4Q3EzYUl3MWNrRTdoem9helpYdUJTKzFZRFNLNlVlNmVmTm5SUDU0THZDSUR3eGtrRnJxaUE5WWhnajZoWFpxMVVSdHFzeE5UVUUwRlRYM1ppT2wyR2JXRFBzb1FnVFVqSDhsL04rYU5abElhc2l6V1J4QmhvRVd2WWhHNVpiY2VlK1JiOThXS3ZiTVpwL0xRL0JrWnhBVTV4WCtYTUZ4UGF6Z1hPMEpKdnMxUWdyWFVuNkoyajZxVEpJS0sxT29CWDhzRDgzb2V1MVJNRXdpb3ZCdFA1cG9PVndPSzYxeEcwRzFtdUxNWjdGb3RRb1FvaGNCeUlFSFROTFJXL1RQdUlOV3lWMlNocmJibkhSeUlLQ0F6anFqZXU3WFF2OUNNRDJhNGpZVkZOZHJ2TWlNRXBaS1ZOL2xsMzNoV1VWZjQ0UGFvTDNnR09jSjhIcEFDa1ZzL0xpZnNiMUFjU29KUEo2K0QxQTAxZHl4Rm55akFwaTN5U3JWeVdtaUt0ZzQ1WEI2cXkyZE9vUkNSa1ZoamhETFUwPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "ND",
+            "level": "Non-Degree Courses",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="cbf3fb95-b90a-4d61-9e5b-6b0050b7cd2f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Associates" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="c244bebe-5f3b-45f5-ad02-7b0679963cd5"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="dd342982-6ad1-487a-b17d-4698d179168f"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="fd29b777-fb63-4e01-baa0-d9b84d470928"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="0c6dd0e1-eba0-497f-b385-f5c0665aa566"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="936626f4-cded-4105-b2bb-bfa84b7e0fe1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="c1decc60-3719-4873-b2b7-59b631a89435"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>William</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Amanda</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>20162415645</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>15645</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="f0754fe6-1b27-4e25-94f1-e48f2b9589aa"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InBXSGR2OVJDUHdSbFZPNjFGZlRBUXc9PSIsImVuY3J5cHRlZCI6ImNwUFR2cDZUckVZOERQenNwRkFIVUlPVU5NMk42YmVqOVdLV0xVZlplYnU3Vk1aQUJLOCthNWpwSXlHd2RKWjlkK1NrN2J0TmFQcjF1Z25LaENXY2R3M2dBdWtNNFRHQ2R5SUlDc0Yxa1AySk10Y1dVdmlzbVliSXR3SEdkZHJnbjVXbzJxSlQvOWtEbEorUkc1TGNobUpZWVlaWkFBeksrMnVHZno2dW9XcXJZTzdqU2xqMDlINEFlUGhBUkN5ck9EZDE4UzRlaTdyUThwNzcrVUtmTE0xZytleERGektzL2RPUEszUVRJMTFEY2c1a3Bua09MU0tRS0JWU2x3Si8xVmRyckdEQWpQRUNmN2FmOGlRY1NaZG9KbTlSVFk3WCtwbUpLcG5OWHFRWkUrYnYwdlNKa3ErejZOeHp1YXVHRDMxcTVkdUdLdmVuSGptZS9BNTFwTWhPSEpVVDNxWlBZSWlIMDlDVEl5UGUvblVheU9iTVFtN2tLek9jQ0R2OS9MRGkxS25UUGJCcW9qQ0ZGY3JOMEUwUjdvWUdicjBsc0hUbGk3enFFNFVBeHRMSFFEbjloSzRXSldYbmt5R1dLNHRPZVExQmY1eDR3REl3N0tsbkFxOFF5a3RrUkdiVDNqeUZTT3ROY1IyS3ZIK2Yrb3JkcW11RGlQdHlIYmtQUWJ4VTd4bS9TeWJRWE84VUpubDkvY2Fuc2hDZit4L3MzSnpYcWhUK0Q0UFhGNXorUEhwc0ZhNFlwSThoZVB6WWh3QWJjVEhGNEF3eUd4bGtzZWFUVlJEa3I2alVsUWhKWjU1eTcwdGY5UUVoQzV6eWZFR2toTE1PRW5oMXZTZWJlbU9xUlJuZXd6cUowMkh3a2VlMitsUGVYdHpJdERxK0JQaDl3V2lCamxjPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "code": "AAB",
+            "level": "Undergraduate",
+            "area": "Business"
+        },
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="1601a86b-9dd6-4e23-9df3-5082f2f02593" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="APTI Payload" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="d0d267e8-1708-4a82-8809-896d796b2c3d"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="c922a719-6420-41ed-9e8f-a5c33510dd8e"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="31abd63f-2e22-46c3-b2e3-1299850300a6"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="3ff0fe95-e954-4f76-9f28-0c69f63475b5"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="32028b15-ef4f-4f61-bccd-6348d3a7d1ee"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="aaa53d94-bee2-4329-9f64-3975153c1de1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Adam</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Sandra</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>2016219103714</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>103714</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="7993c34d-f8fa-4b09-acff-59a44e7cc7a0"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6IkxQNkFHK1dtVWMwR3F3NHVUcllSQVE9PSIsImVuY3J5cHRlZCI6ImRZS3gxanQrcVZ0dGQzb0FZL21Kak9HZG80ZmFvcFQyM3FOOXBPRFpVWXl5WEI5Y0Q4bzIzUE9jUTV3ZjV1c1Z3RkUzV0VwZGU4VHd4K0FJcG54THVpWGlmWFh6aHJiUEIxSGduVUx2VXY3NHV4cXRjNVdxVnZjVTE1a0tVUTBZOGE0TUwxb1d2d3piLzNHMG5PMTI0TElQR0ZtTkpUd0ZUdXBSekZzWktVZUVkaFJid3JyTS9rNzJTdFZ3QTdKKytlU21rVmFyNnFHOVRvMHFZQk5JMXNEa294SG41Qk84M1hpek1KL0xkcEJ1SGZzbTNNNVZEeHpJQnNXb2xjSWRkVmxJZWNPMms0eDdlc3BXOXhyR3UvOTZLby9wZy9hK2E0RlI4VXZwenduM3I1ZTBhTXNqNk0xRmlsRzliWTJDcVRZY3k0dUFlT3NOMGwvUGRPRUJQcGFYWmhkSFVJMEVXcjhhUTUyVWJVbjR0dHRnUEtRbTIyVlhYcWJHSU1VSzNmYmdhN0J4RnhMR3ZvVWt0Y2lMV3FpOEY4NUtyTmx4WUd5eXA5UHlmUHp2ejRwc1dXWnN6V3NsVXNxKzU5UldhWUJpQXRTbExFeEk0MXpDL1pKTUFWUFdVczlrY0dlU2lFeGxVYUNici9RRERFYVRwTTA0RHFQYU5sTkF2RVQ3WDNXK3lLeGRPcEkxSENOTHg0RC9MbjVtVGIzOEt0NXpSUk4wSlJ5TE9hemtFZkkvdlZWc0xlNi83ei9URS8vTzFVZWZnWW5LdU5lYUNvdEw4QndQa3pRTDJoSGlOVnBWdkVDd0ZCZmVNWWExdWJjRS83MTFwWUtoNXBWbG5iaGtpMXJOV0tSREswdVRvUjdFQ2IrdVVXNlJoaEJ2Y0xTSUlhcmRpM0xKaW1zPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{ 
+    "aptiLeadId": "72193728", 
+    "foreignCredits": true, 
+    "rfi": { 
+        "program": { 
+            "academicAward":"Degree",
+            "academicAwardLevel":"Associates",
+            "code": "AAIT/PRG", 
+            "area": "Technology", 
+            "versionCode": "013B"
+        }, 
+        "campusOrgaNumber": "31",
+        "campaign": "AD", 
+        "source": "BANR", 
+        "modality": "Online", 
+        "educationLevel": "Bachelors", 
+        "hasTCPAConsent":true, 
+        "requestingIP":"165.214.12.69", 
+        "requestingUrl":"http://www.phoenix.edu/vr/aptm", 
+        "isThirdPartyReferral":false, 
+        "referralNotes": "Test" 
+    }, 
+    "referringAdvisorNTLogin": "fauser", 
+    "referringAdvisorRole": "ENROLLMENTADVISOR", 
+"identities": [{ 
+"type": "SUPPLEMENTAL_ID", 
+"value": "9058802578" 
+}], 
+    "profile": { 
+        "name": [{ 
+            "firstName": "${Properties#FirstName}", 
+            "lastName": "${Properties#LastName}", 
+            "prefix": "Mr." 
+        }], 
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    }, 
+    "useCaseContext": "NEW", 
+    "appContext": "RFI" 
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="f44e7f90-aa81-48c7-b49e-27396bfa1ba4" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaols.phoenix.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("Request 1").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="89d3893b-0c2e-4039-acca-94e0d1491cc6" name="MLH"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="cc453f9c-3f0b-4cd8-bc30-a20fcc746166" name="Re-Entry"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="31560339-9e4e-41bf-a734-ae1ab0813bcb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Re-Entry" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="c7c8e9de-b222-4788-9ec5-0aa449066ab3"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="4ccccd8f-6ac0-41e1-96aa-fe7cc249d08a"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="b9077dc3-411e-47cc-82c4-dfe91688d36e"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="69d0993f-f73a-4766-ac12-a50968ce8e5f"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="af88d105-2cc0-4908-b627-38c3c5c7d6df"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="7fab3215-38e5-4f13-b114-d9f1d371f08e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Sean</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Marilyn</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201621795834</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>95834</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="75814267-0368-4890-82a9-b2c9bb3b0dbd"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6IkVkRDhWOHU4VDIxcFh3Qld2Y3g5Y0E9PSIsImVuY3J5cHRlZCI6InRtcnNBWE1pOUVHNzhrVk1kTE9qT1ZnM21LbHlkTVVjWmVzaWxqMFEwdUxZV2QvZ0h2U0JsMVVPNTBjMGVIaHdzYVhPZDdWamtrTXA4RG54OVg5d3NURHQyenc0bE1YY0tQRDM1YUpCRFpGbzI5QUNlb1ZMTUc3THhoYk9NWEhvTjNIbWV1RFBraitXMW1LalRWTWo3dmpJWnVkRTlTdUVPS2RUNHNHaDBqSGltQVd1QSt6VDVBRE9jcStTdWxtV1NnaFZ1N1VXVjB0L21JWkJMRmdRZGpaY1lPcWVCR3lFeWtJcFRxT3R4TmxtdXdJMFRQUEY2Ym0vQmJ6RGkzdVJHeDB3bnBob2F2OHM4cjRFM08rMENGcUNsbzZQS3lPU1RBejRwN05SdGZwVk45emhLMFN5VUt3K3NNbFBCSm9XR0EvSmpmdjJETDZOcWNtcmJRcDVUK3BsK0RwWkJvM3NDdko1SEdIcWxrNlZaQmhmKzkrVUlraGdOZTd6SHN0a09yZ0dwKzZWVkJkdnA2ZXZGWXNxTnM5dWR3aHljb0lrZHl4VTVxWDNmQjliSnBQMWE5ZzhlckM4U0QxN0JENnU5R01tZzhTZEl2VzltTHZIQlN1S2loQTdwTU1pcFhzL0F1Sk1xUVZiUmNuQXp6U1cyVUEwNFUzOG1aUzZSZUF5emREVzMvZENrOXBYYTk5cHRIM3laRTJKQUZIck9oUlpSd1huV2JoZThCZGRRb3hjTkFUYnRXZ3BWM0tWVjNFY090SmRDbklxYzBQLzJMQ2hVTmpHMklZS3hISmZnM1NKR3ZySW5Jakh6R1RlT2dCMlY4UUVYS0ZkUmgxczRJOC96MFZPdFNqUURPUFhmYmFVU2ZHQ0s5SmtwS2o4dWVhK1JFcGVwTWNuRXdnPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+        "campus": "ONLINE",
+        "campaign": "REENTRY",
+        "source": "RTY"
+    },
+    "ownerNTLogin": "quser",
+    "identities": [{
+        "value": "3e3bbf66-049a-411c-93a5-2223c25028cc",
+        "type": "PROFILE_ID"
+    }],
+    "appContext": "SRMREENTRY"
+}
+</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="74aa5816-3b25-4dbb-94e9-4fe74cffb047" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaols.phoenix.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("Request 1").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="5b0cc155-3fff-4a58-ab77-ffc2548180bd" name="Bypass Leads"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7b553f99-d2f3-48df-b02a-0b4f2a6cb382" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ADG" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="4ef30272-9040-4bae-84be-56557262a685"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6Ik9wK0t2Ukl6ZmY4c2tZUlZST2xnQVE9PSIsImVuY3J5cHRlZCI6IitXcnc3U0kzK2c5ekVvdUl2V0EvRStqZy91T0R0ZGVXZXFLdjJMYmNvakpjd2JHMFhxOHk2S3JVaXdxT2YwUTR5b3lFR2pKVElCcGMyQUJmNGRBRkVOMEZuZW50Z0k4RnI3TzhPY0hDOCtPbUJHc2tGOVY4WU1FdWNZN0ZxUlNXK3ZxTVlpQUZIQmVQa0lYWlNPcTlGR2JyTGJMSHVtb2lGR3FBZWUva0FZd0R0Q3VHLzlVTnFmSVdLNjFzNCtUTi9xNXViMTZ4RjIrMkZaaHZGcVpjaG5JWjNtVlp2d3E5cmZKS1NXNTB1TGhFTzcvZlk0OEk0K2lJdVdpNjRLcVRreFBNQWFXMGwwdmdGYXRTcXViZk0yQU9oU0ZzK0o0MUpNendqUmkxbXZVa3djalM0ejUyOGxFME5lMnVMTmpyb0l2UjNUU3RkdXlTVnZNeGpybmFjdDBiT3pMRlF4b3FOZWJDbkhva3BRdEhyY3hEdVlFSVV2ZTZBZFRHSWJMT0Qza2w1Wi9zc0IwUVU5SXRrdWRRdkpXYXhPMWJ1QitTV2dGaFdSeHVBYlg2ZmZpMllaSnZ6RER1WVFFY3dCWnV6VDUyeHpYZ1psaVh5eEFDako1WmE4dGNHSW5mUU5FR2pEdGZiTXBFOFlTc1pKQkRIdWZPeTkzYW9mRno5N1krK2haZU4zZXU2U2ZKTjAzN2poTzRlSVdrM2c5WVB3Tm8zLzBDRC9jUXZraHhYMTUxV2d4SERZcDFaRjJFUHZyY0pPc3pmdnVIekQ1M1V2dUx6aWdybW1Sb3J4RFIxNVJCSWM0bmdoTGJtL3I4QTBNTERNdFZycDlKSlZ1aEE5MXBudnZwK1YybFM1aWlBM1UyTENrcmdRZG1pakg3elV3ZkFlenk0WkV0TTVzPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSED",
+            "area": "Education"
+        },
+        "campus": "ONLINE",
+        "campaign": "ALUM",
+        "source": "ADG"
+    },
+    "ownerNTLogin": "uuser",
+    "identities": [{
+        "value": "efe65f15-d44c-4c64-81a3-b28903094681",
+        "type": "PROFILE_ID"
+    }],
+    "appContext": "SRMALUMNI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="54aaa3a5-e2bd-471c-8d27-baaaec1d623c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BDG" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="70da46e8-27a4-4cc1-8d03-08aefbf73260"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6ImcvM0Z3NVd1alJHdXFmeS9rQWh0R1E9PSIsImVuY3J5cHRlZCI6IkF0ajNOZnF6NkF5Umh4WGlTa2ppdm9nWE9WeUtwUVYvN3hNQnZUbkE5SjBOVWdwZGlkSllybGMxSDZ5L3JYT1psWXJHUlB4L3J5aTlCL3RRNlJobkIyY1N3NHZJVUpFQkxhUU1TRlk4UFZOMFVrWEcvS2VXaFNqTkltb2Z1cWFaakJsYTFnbVlzVk5qcW1EbWYzTHRLMWNoZ3FQV0cvZFRXTDZscm02M3ZINm5tWTRFNEcxSmRaN09hd2NHL3BVWnFMSWRuR05JZUMvQUZZTUZubW0wNDBpOFkwb1JDd1RJcVlPMXNoMWoxRWQ5clhuTmdIOFN4NzZvamswZldxTXNvKzhsY1lwdm5LNzZRd1UzSHJjdDE4QkFiY2FCTkpSSHA4OElUem5LM1NrSjBKZjVPQUtwZTNiUmhNWUl3TGtmSktvenpCaE0vV1h0eUQ0azJJZW1ySnM1bzhYSUlVUWk1ZHhrUVNkeVB6TVVqTUY4cFJZQ1psMTIyblZYK3dOcThLZGFTNU4xa0w4NXREOXZiR0VvRzNNYUNmVWdzZTMyVml5T1lQUUU2ck5yVnlvK3JrOHpLNmt4Zm9iVWt1Mms2VW5BMlE5RnpkMlhtTk1QSnJ6Q2hnOTJndE1reGxoMlp4RGszZndaQ2JEZlRuMnF0bzZrSmI3MVhFQlA3N2F0dTBXRWlHV1VEUWNOZnd2bmZJcmlLVTFCb24xYW5XWHBZRzFaZVpzeitXQmRsblMxRVFMako4WWJlYTIyV2NYVzZFbHA5KzhXNUVIbE5KT3YzeHVLRnR6RDQ4azhPc1poSThheGxxVnNCUCtmU2pOMHFYaVNjeTR6Tjg4c005dkIxaDhCY3Z0eXZPbkJzd0cyNWdNMW0xT2cvRE94N1pYQXV5b1g1VG0rNWhnPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+        "campus": "ONLINE",
+        "campaign": "ALUM",
+        "source": "BDG"
+    },
+    "ownerNTLogin": "uuser",
+    "identities": [{
+        "value": "76426484-bd1c-4cb7-aa93-5eca83c68aa8",
+        "type": "PROFILE_ID"
+    }],
+    "appContext": "SRMALUMNI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="0bfc5eac-baad-49d1-adad-4b319f0139f6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ACRF" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="e47d089b-47af-4868-8f89-2dd8504ceba0"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="9af7a933-428b-4361-b922-d8d679714c2d"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="0bd3f453-7f27-446a-bcd4-b84a914433f7"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="468b2f89-218a-4751-8ca0-a174d2cbca3e"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="25539a75-9f57-408a-a038-1c7993f5668c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="ca76c38a-bfd2-4c7f-a18d-7e61c7239d63"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Ryan</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Karen</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>2016316104517</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>104517</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="a0eb39e9-84d8-4cab-8e5b-26a24f5c40b0" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaapollogrp.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("REST Request").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="625ca9af-8f22-4140-b5ba-9486f3372c9b"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6Iko2Ry9EUVVBci81L0xFN0MyWFJCM1E9PSIsImVuY3J5cHRlZCI6IjRHQlFtaHlDbkY0US9NMmh2ckU0ODFGREw1ZXg2S2cyN2NWQ2lFREpkd0VLQ2h3NDR5aTY1ME5QZi9CMzNIdnFYcTB0eUJkVDl5RFBLZ28zbU56emlBa0t2WjJXbmtaenFsRi9GOGt0VEh0WnVlTldYWTJ4ZGpONVpKQUpPZ3dsa0hyblFnVjNqb2l4ZnByVGZ0dHJhcWFsOERsUnphMzZmSlNCZ3dwLzBwM2I3akY2NU9QaThWazNSNjRKVkN2KzJ5NmJ3d090T3BTOXhSRXV0b1I5V1dPUkFMSGNURHJ4UHZkczM4ZU5sQThwZ0lRM3YzdkRVQ3NmSFUyQi9qRXd2VGR2VmpoUndvMDRoc0ovWVl0TTJQcDRRZXh6MTRFbGpYY3czVDMxSk5RT296S2k2KzZ1T0xiNDI1eENYcWdXbHN3THlWNzkwMi9EY0E5SFFybFIweElFMkFwa21icm95YmlqTnYzb0hFTzIyeSt3azdLdGxEbHFhc2hWQUEyQkM4M2s4SnVaQWE1d2hnMmdEUGN2cDRkZkVaM3FlbVZEb1I1WXplZEphLzVaalRST2N1bnNyd3BaZWo2K3BIc3VSUGVDalozNmtSUWk5YnFLN1AzeHZMUDJiM2t4TVBEMTRzUFp6S2pLVTlaMWtCSE00UE5EKzJ1NDgwT0tITUhUVmh4SUp5UE9rUDkvZTJOQVRpM2NaWjZlakxxa0k3c3laL0pIeGY2SGxQME5RK09nU1JvNTF2U1FFeWJEeS8xSmVNNmFLaGx4R04wVVk4RUFiY2t5NnllSXNiZG1FTHZyV0FreHpGY2JTSE9qeVgrUU1vVzE0QzY2VllESUFkb1dWekl5YjJ0TW5HbGJ5c0NaNGFnTkYrYjR4eW1obW1nQVBuREgwdWljQzJZPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request> {
+    "aptiLeadId": "12584348246",
+    "foreignCredits": false,
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "ACRF",
+        "source": "ACRF",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "LEADFORM"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>Cookie</con:name><con:value>APOLLOASSERTION=</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase id="0589ef29-0c30-4e31-b894-5cd337f04fee" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="REFR" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="636ec575-26b0-452a-a75e-98bc1cc9b4aa"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="369e3893-076b-4c17-b034-5b07c0c63fad"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="e7ca641d-7b5a-4bc6-b62d-d0c4c874cde4"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="fef4298e-9061-4105-a5b8-bf91c18729d6"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="262c58c8-7f01-406b-b709-b46f8476cb91"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="ef43f039-d12b-48e6-acb1-385b95a44df1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Phillip</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Catherine</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201622610172</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>10172</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="a48d59b9-2932-4515-84c4-8174bc4f1c44" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaapollogrp.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("REST Request").testRequest.setRequestHeaders(headers)
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="1cdda89a-13cc-450b-a355-66f8c9c335d3"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6ImZFUHNvT09ncXNTVWhseWwrOEJ4bXc9PSIsImVuY3J5cHRlZCI6IlVnSzZjSkdIRnlkMmRkV0QyVmFRdVQ2dHVseXhUWmZCa085SDUvVnl0cE5BTFVVb2liU1Bac2JGdGhLRElOWHZCWjBuQkpKYmZXNGt0VlJGbk9uSXp4UnVDbmVUZlRVaGtTMWNyZkYxdnhDZTNLZmRtbUYvNFhiMDVxdmw5b3U3YnRWMCtOSEZhcy91eHJyWlR4UUd5aHJBWTlNUGxHeGhBbENHcUxOZEJlVVFKSWo4aSs5SW80SlhVU0cyY2xKZDE2V0d3azFtY3JXZ0YyODNHTGRNVTQ5ZEJLbTdNY3BVV2VQYTJxS2RaV1I2TlJNVThqS1pYV3V0cnl6b3hmeWJhTDZIZngyTTl5ZklSVW5lQ0xOMHpCNDkrcE5ra1JZUmxhKzF3MGptQ1JldU9MTnNJSWdnTUd1ajJRTFJITm8yeDVVRHRFeUVrQUZ2MkxicXFhbFNJT0U1SUdYcnJyeTE2RUZ6VUcvYmliZVQ5azVubkxsT1dPOWRzU2xZTThzeFpnNlBlUFdhNFl1cHU1eFg2aUpXOXJheEtLOTcxQnM2UG9QbDNBN3kxWXRWVUFYckJ1d2NqVlNDeS9HSXRUZTZBbFI2YVhHWGJyVUp5UzZpd0hTMFJSVDRPWUUyUFRaL0ExbnBpMVJFL2ZIUmwybklHc2lUR0JmLzRneXBwTWdGVzdqdHdhNGI1L0dHMUdLWGlVZWMyUkVNUHBvQW1PWXJPRTJIWHA4WlhqUXcyTTkyUmRVdUdWaGZkY3JKb2ZkYzNzNzNYeUY5WXFrWEs1Q1ZVQ0cyOGZHeUdJMFhGR2NWVEpUNUNrTXZxMFl3WXJhWWRZSnNSb2xadDVIREpTbEExeFR1SitPd05aVGpyZkptVm03Mm1lWlRrRnlxUE4rUEs5QTJqcnpiRGljPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "REFERRAL",
+        "source": "REFR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "LEADFORM"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>Cookie</con:name><con:value>APOLLOASSERTION=</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase id="aade15d6-e978-4ea2-bbc3-83523e65a0c9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="APPCENTER" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="1f874135-c1fc-4ac1-9f24-3dd1936e25e4"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6ImFmRExlZGR5TlkxWjJ3Q2Y3RmxNQ3c9PSIsImVuY3J5cHRlZCI6ImxMTGQ1SWJsOEdvWlppblRDdlR2NjJCa2Q5YkwzN2NWczkwL1lJWWlScGxla2NxZEhIMk5JMmF4SXlJSHZ2QmdYSDBJZi81YkUyQ29zQXYyb2RpdGFpa2JOMDcwZUIydTB2MVhjVS96YUR4S3M2NmEwZkM5ZngxNEdQUlV5V0hDd3l3YWJrMjV2YVZXaEcyU0FEK0hBU1RLSGxtOCttVGxVKzhOcWtiZGc1RVZMU0pBVkcyeDVnQjZGZEFaWkVCenVvOW1lMFd1dHVpclhkbW9aTEp2QTJmTy9sV0hLSjFpL2d2NFNvNkFiQnpDdXBGb1VnZGVGMkxOeWJMWXF6Zjc1bGlEYWdDRmszM2lDVXUxQWZ0VVpQTFQ1aTR2YTl1WVh2WnM5OTZ0M2hneGFpaWh2NTZrWmVmR2doTjc0M1VkN3dnUTFyS2ViYllJTUhmMkxiVHdHeTdpWkVrRExYMjQyU2dJVG1MUTFJKzJEL212ZHBPTXBBUGVNMmQwdFhReUpGaWM5Uk9GcnpGbVhpQ2kzb2NPN3lmWkZZRDB4Szc4Vld6bk9sWTBrbDhrZTNlK01mMWNPc3o1RlZhOUVOK2JNcVRUbGFseE5aQTdQeERXc04zNHpHOFZ6WVFzOGdsaDl0QTZSRTVQTDYvc2NiN291UlREekc0RUl4UjNYRVVrVmVOU3cyR3RWWDJnL3dVL3AyUUpmRW5XazNYY3NWSDR6OHRwejZ0UFcrSDFRdThJTXhMa2JKVFdHQ3cramNUN2JzUU9vVFVIL3ZSRkJ6VHB5ZXQ5ZHB0UjhSY3RmNjFDVGhYOEtDYjRxL0RDWFVFQk1JZXA2MiszYWR1dld0NnJ2OXdsdWN1WHZUc3l5OVJDYzg4Rmt4WVFqMGdGZi9VbnN5UFdUc0VwcGhVPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+            "rfi": {
+                        "program": {
+                                    "code": "BSB",
+                                    "academicAward": "Degree",
+                                    "academicAwardLevel": "Bachelors",
+                                    "area": "Business and Management"
+                        },
+                        "campus": "Phoenix",
+                        "campaign": "APPCENTER",
+                        "source": "INET"
+            },
+            "ownerNTLogin": "auser",
+            "identities": [{
+                        "value": "9a903577-2ab8-4008-8933-083a9fece681",
+                        "type": "PROFILE_ID"
+            }],
+            "appContext": "APPCENTERWALKIN"
+}
+</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="54274fa0-ecdd-44c7-a617-71c791f3d0d2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Shopping Cart" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="2aa2105c-23e6-4aa1-b017-306239475ccd"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6Ik9wK0t2Ukl6ZmY4c2tZUlZST2xnQVE9PSIsImVuY3J5cHRlZCI6IitXcnc3U0kzK2c5ekVvdUl2V0EvRStqZy91T0R0ZGVXZXFLdjJMYmNvakpjd2JHMFhxOHk2S3JVaXdxT2YwUTR5b3lFR2pKVElCcGMyQUJmNGRBRkVOMEZuZW50Z0k4RnI3TzhPY0hDOCtPbUJHc2tGOVY4WU1FdWNZN0ZxUlNXK3ZxTVlpQUZIQmVQa0lYWlNPcTlGR2JyTGJMSHVtb2lGR3FBZWUva0FZd0R0Q3VHLzlVTnFmSVdLNjFzNCtUTi9xNXViMTZ4RjIrMkZaaHZGcVpjaG5JWjNtVlp2d3E5cmZKS1NXNTB1TGhFTzcvZlk0OEk0K2lJdVdpNjRLcVRreFBNQWFXMGwwdmdGYXRTcXViZk0yQU9oU0ZzK0o0MUpNendqUmkxbXZVa3djalM0ejUyOGxFME5lMnVMTmpyb0l2UjNUU3RkdXlTVnZNeGpybmFjdDBiT3pMRlF4b3FOZWJDbkhva3BRdEhyY3hEdVlFSVV2ZTZBZFRHSWJMT0Qza2w1Wi9zc0IwUVU5SXRrdWRRdkpXYXhPMWJ1QitTV2dGaFdSeHVBYlg2ZmZpMllaSnZ6RER1WVFFY3dCWnV6VDUyeHpYZ1psaVh5eEFDako1WmE4dGNHSW5mUU5FR2pEdGZiTXBFOFlTc1pKQkRIdWZPeTkzYW9mRno5N1krK2haZU4zZXU2U2ZKTjAzN2poTzRlSVdrM2c5WVB3Tm8zLzBDRC9jUXZraHhYMTUxV2d4SERZcDFaRjJFUHZyY0pPc3pmdnVIekQ1M1V2dUx6aWdybW1Sb3J4RFIxNVJCSWM0bmdoTGJtL3I4QTBNTERNdFZycDlKSlZ1aEE5MXBudnZwK1YybFM1aWlBM1UyTENrcmdRZG1pakg3elV3ZkFlenk0WkV0TTVzPSJ9 "/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+            "rfi": {
+                        "program": {
+                                    "code": "BSB",
+                                    "academicAward": "Degree",
+                                    "academicAwardLevel": "Bachelors",
+                                    "area": "Business and Management"
+                        },
+                        "campus": "ONLINE",
+                        "campaign": "SHOPPING_C",
+                        "source": "INET"
+            },
+            "ownerNTLogin": "uuser",
+            "identities": [{
+                        "value": "3f3dc437-9f90-44dc-aeaf-fe53281ddf23",
+                        "type": "PROFILE_ID"
+            }],
+            "appContext": "SHOPPINGCART"
+}
+</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="6066ad21-08b7-4c1f-9271-7e3ad189ba2b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Referral w ASD" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="5a66ef89-dfa9-4831-be62-026bc62333e4"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="f9ab90b2-5d6c-4eed-9297-eb3088b1ff1a"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="a7ae12a7-e0f6-4f1f-98fb-2d5a4b22c44a"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="c9046ee2-fb6b-4541-8e4f-4db56f9ddf0a"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="46337f66-813b-4753-82fd-851155011347"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="c3cb3d10-c303-4d15-8aad-6e11db66f4f8"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Peter</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Carolyn</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201632581838</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>81838</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="c29d4f3f-ce43-4cf4-a495-17169c23bb34" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaapollogrp.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("REST Request").testRequest.setRequestHeaders(headers)
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="631c51ce-c170-4a9f-8cae-46b423aaefbe"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6Ik9wK0t2Ukl6ZmY4c2tZUlZST2xnQVE9PSIsImVuY3J5cHRlZCI6IitXcnc3U0kzK2c5ekVvdUl2V0EvRStqZy91T0R0ZGVXZXFLdjJMYmNvakpjd2JHMFhxOHk2S3JVaXdxT2YwUTR5b3lFR2pKVElCcGMyQUJmNGRBRkVOMEZuZW50Z0k4RnI3TzhPY0hDOCtPbUJHc2tGOVY4WU1FdWNZN0ZxUlNXK3ZxTVlpQUZIQmVQa0lYWlNPcTlGR2JyTGJMSHVtb2lGR3FBZWUva0FZd0R0Q3VHLzlVTnFmSVdLNjFzNCtUTi9xNXViMTZ4RjIrMkZaaHZGcVpjaG5JWjNtVlp2d3E5cmZKS1NXNTB1TGhFTzcvZlk0OEk0K2lJdVdpNjRLcVRreFBNQWFXMGwwdmdGYXRTcXViZk0yQU9oU0ZzK0o0MUpNendqUmkxbXZVa3djalM0ejUyOGxFME5lMnVMTmpyb0l2UjNUU3RkdXlTVnZNeGpybmFjdDBiT3pMRlF4b3FOZWJDbkhva3BRdEhyY3hEdVlFSVV2ZTZBZFRHSWJMT0Qza2w1Wi9zc0IwUVU5SXRrdWRRdkpXYXhPMWJ1QitTV2dGaFdSeHVBYlg2ZmZpMllaSnZ6RER1WVFFY3dCWnV6VDUyeHpYZ1psaVh5eEFDako1WmE4dGNHSW5mUU5FR2pEdGZiTXBFOFlTc1pKQkRIdWZPeTkzYW9mRno5N1krK2haZU4zZXU2U2ZKTjAzN2poTzRlSVdrM2c5WVB3Tm8zLzBDRC9jUXZraHhYMTUxV2d4SERZcDFaRjJFUHZyY0pPc3pmdnVIekQ1M1V2dUx6aWdybW1Sb3J4RFIxNVJCSWM0bmdoTGJtL3I4QTBNTERNdFZycDlKSlZ1aEE5MXBudnZwK1YybFM1aWlBM1UyTENrcmdRZG1pakg3elV3ZkFlenk0WkV0TTVzPSJ9 "/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+        "campus": "Phoenix",
+        "campaign": "REFERRAL",
+        "source": "REFR",
+        "modality": "Online", 
+        "foreignCredits": false,
+        "hasTCPAConsent": false,
+        "isThirdPartyReferral":false,
+        "anticipatedStartDate": "04/05/2016",
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "referringAdvisorNTLogin": "lggreer",
+    "referringAdvisorRole": "ENROLLMENTADVISOR",
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "LEADFORM"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>Cookie</con:name><con:value>APOLLOASSERTION=</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="ca8c7702-8ba8-4d8c-b859-c5384e205408" name="Misc"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="174ae9d2-318b-4723-a711-42c9fd181ed5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Third Party" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="f2bd5a56-b8f3-4b61-931c-364132e62a7c"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="adffbba2-e467-4a42-86f6-aed6690daafd"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="41b08c85-adbb-467f-be9e-b7a401c3e4a9"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="0a05a11c-6ac2-429f-9cfa-47c55840688b"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="cf6753df-5dbf-4773-96e8-b3d9205869bb"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferChildNodes="false" ignoreEmpty="false"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="57a93d63-d133-4e22-ab5e-6d90ac10a2c8"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value xsi:nil="true"/></con:property><con:property><con:name>LastName</con:name><con:value xsi:nil="true"/></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201622610172</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>10172</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="46d19f37-0051-4de4-a990-e67d5d7f17f0" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaapollogrp.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("REST Request").testRequest.setRequestHeaders(headers)
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="96ac3f6b-73fc-41be-abd0-0556fe741e93"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InpMVUFOeEtHR3VxZi9ZempXWEs1RHc9PSIsImVuY3J5cHRlZCI6Inl1Zk05VnpvY09ybitPb1pkakVmMnpjUWFiaFRmUnVzS1I3MkpRRzRsRStVcDNFZDhMdlZnQi8vWDZqQm5sZmNnQ2J2cnVCQW15WEsySThpeDRlWTZKTU0wYklDems4RjUwWTdzY0ZyWVRrVUpDbUFLZmxHbTR1RDlMUVJGeWZaaGh1M0hITEhlUG9jY2JuM1dHZ2Jla1pCeXJETm41VEJKWFRoQ1BOSmo3MWRXK0tDZVhhdk5Gb1ovcG5MTCtyMy95SjhSTHBWRC9BdmhOOFR0V3hHSFFvUFVlYld2YVFNemJMaksrT2Uvd1E1UnhRWjNTMGNES3hhSXF3eXRkZFBRdGhhQUs2RXpsTmw1QzNLV2M5dUFqRUxCeklmZG05UXMvcTN2b0p1NDYyOWl1cnFNVXJQWThpcmRlV3ZWU2VvbkJ4OGNJQ1RuSUdXK3EybHgzNnh1WmY3Q0E2eWNSck1DaXlvSkd2c292TDRuS0NzOHNVSG5GaGdBZEN4VmVKR2FnU3JqVnR4aXJjNWlkaU1KbXpIRXhadzJwWDhaREJBY1FULzBnZ3lHQXl0aEZUOTdSZHVLMkFIUkNlTStJRGg4dE5LSldkbWtXQldoWlh0dU5JeUVJWXF1VjFVS1JuTHd4RVg0RU9JNElGUldlaFQyd1ZkQ0FrZ09uZXJDVndFN0xWUnlwQjZGZS82dmY0bkh6eE8xajc2TE1OSmpOQ0gvZndnNHdtdFBZMkIvV0xIOVNkbEFrbnd3a09MUTBua2Vtc2dIUElYZ0xwRGZsaSt4em5vMXJLb1VEb0xHVjBic29TdFUzZm4xNEFwNnUrZmdKTVlLbFB4L3h0S05Ba3Z4bnJKdXI0ZERadnNvQ3NlTlBtaE8wWlphQ0dNN2szUmlvK3pVc0NmVkZzPSJ9 "/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "REFR",
+        "source": "REFR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com",
+        "isThirdPartyReferral": true
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "LEADFORM"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>Cookie</con:name><con:value>APOLLOASSERTION=</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase id="760c30c5-953c-4674-8dd6-b8c9a9b77708" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Military" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="197e2a6c-9700-4bf8-9e48-b8c247a97cde"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="38c1eab4-356c-4e94-a139-d5212fc648c5"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="0c6c01b1-a476-4947-8c34-7dbf88ba9438"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="f6e85526-cb26-4ae6-a74b-7983f73a71af"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="50e2a22b-c19b-498c-9b50-04bb889a2974"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="95b8cabf-758b-46ea-8fc1-c9f5c8ad71e8"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>Harry</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Nicole</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>2016226103623</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>103623</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="bbf05b3e-2e8a-4dd2-a415-003248c280d8"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6InpMVUFOeEtHR3VxZi9ZempXWEs1RHc9PSIsImVuY3J5cHRlZCI6Inl1Zk05VnpvY09ybitPb1pkakVmMnpjUWFiaFRmUnVzS1I3MkpRRzRsRStVcDNFZDhMdlZnQi8vWDZqQm5sZmNnQ2J2cnVCQW15WEsySThpeDRlWTZKTU0wYklDems4RjUwWTdzY0ZyWVRrVUpDbUFLZmxHbTR1RDlMUVJGeWZaaGh1M0hITEhlUG9jY2JuM1dHZ2Jla1pCeXJETm41VEJKWFRoQ1BOSmo3MWRXK0tDZVhhdk5Gb1ovcG5MTCtyMy95SjhSTHBWRC9BdmhOOFR0V3hHSFFvUFVlYld2YVFNemJMaksrT2Uvd1E1UnhRWjNTMGNES3hhSXF3eXRkZFBRdGhhQUs2RXpsTmw1QzNLV2M5dUFqRUxCeklmZG05UXMvcTN2b0p1NDYyOWl1cnFNVXJQWThpcmRlV3ZWU2VvbkJ4OGNJQ1RuSUdXK3EybHgzNnh1WmY3Q0E2eWNSck1DaXlvSkd2c292TDRuS0NzOHNVSG5GaGdBZEN4VmVKR2FnU3JqVnR4aXJjNWlkaU1KbXpIRXhadzJwWDhaREJBY1FULzBnZ3lHQXl0aEZUOTdSZHVLMkFIUkNlTStJRGg4dE5LSldkbWtXQldoWlh0dU5JeUVJWXF1VjFVS1JuTHd4RVg0RU9JNElGUldlaFQyd1ZkQ0FrZ09uZXJDVndFN0xWUnlwQjZGZS82dmY0bkh6eE8xajc2TE1OSmpOQ0gvZndnNHdtdFBZMkIvV0xIOVNkbEFrbnd3a09MUTBua2Vtc2dIUElYZ0xwRGZsaSt4em5vMXJLb1VEb0xHVjBic29TdFUzZm4xNEFwNnUrZmdKTVlLbFB4L3h0S05Ba3Z4bnJKdXI0ZERadnNvQ3NlTlBtaE8wWlphQ0dNN2szUmlvK3pVc0NmVkZzPSJ9 "/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "aptiLeadId": "1234556",
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+        "militaryService":[{
+            "serviceType":"Active Duty",
+            "serviceCategory":"Air Force "
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "RFI"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="93479768-e836-4732-bb2a-1a68df3865de" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaols.phoenix.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("Request 1").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="366bdb71-f5bf-4dfc-a8d5-984db24b6e98" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Inbound Marketing - General" searchProperties="true"><con:settings/><con:testStep type="groovy" name="LastName" id="148df791-2a10-4ec4-ab26-abe242606a44"><con:settings/><con:config><script>arrLNames = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Dorothy", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Sandra", "Helen", "Ashley", "Donna", "Kimberly", "Carol", "Michelle", "Emily", "Amanda", "Melissa", "Deborah", "Laura", "Stephanie", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Ruth", "Anna", "Shirley", "Amy", "Angela", "Virginia", "Brenda", "Pamela", "Catherine", "Katherine", "Nicole", "Christine", "Janet", "Debra", "Samantha", "Carolyn", "Rachel", "Heather", "Maria", "Diane", "Frances", "Joyce", "Julie", "Emma", "Evelyn", "Martha", "Joan", "Kelly", "Christina", "Lauren", "Judith", "Alice", "Victoria", "Doris", "Ann", "Jean", "Cheryl", "Marie", "Megan", "Kathryn", "Andrea", "Jacqueline", "Gloria", "Teresa", "Janice", "Sara", "Rose", "Hannah", "Julia", "Theresa", "Judy", "Grace", "Beverly", "Denise", "Marilyn", "Mildred", "Amber", "Danielle", "Brittany", "Olivia", "Diana", "Jane", "Lori", "Madison", "Tiffany", "Kathy", "Tammy", "Crystal"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strLName = arrLNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="FirstName" id="b5ca8c35-b2e0-49bf-b416-b10bce27843d"><con:settings/><con:config><script>arrFNames = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Donald", "Anthony", "Paul", "Mark", "George", "Steven", "Kenneth", "Andrew", "Edward", "Joshua", "Brian", "Kevin", "Ronald", "Timothy", "Jason", "Jeffrey", "Gary", "Ryan", "Nicholas", "Eric", "Jacob", "Stephen", "Jonathan", "Larry", "Frank", "Scott", "Justin", "Brandon", "Raymond", "Gregory", "Samuel", "Benjamin", "Patrick", "Jack", "Dennis", "Jerry", "Alexander", "Tyler", "Henry", "Douglas", "Peter", "Aaron", "Walter", "Jose", "Adam", "Zachary", "Harold", "Nathan", "Kyle", "Carl", "Arthur", "Gerald", "Roger", "Lawrence", "Keith", "Albert", "Jeremy", "Terry", "Joe", "Sean", "Willie", "Jesse", "Austin", "Christian", "Ralph", "Billy", "Bruce", "Bryan", "Roy", "Eugene", "Ethan", "Louis", "Wayne", "Jordan", "Harry", "Russell", "Alan", "Juan", "Philip", "Randy", "Dylan", "Howard", "Vincent", "Bobby", "Johnny", "Phillip", "Shawn"].toArray()
+intRandNum = Math.abs(new Random().nextInt() % 100 + 1)
+strName = arrFNames[intRandNum]</script></con:config></con:testStep><con:testStep type="groovy" name="DateTimeStamp" id="c4ce8c8d-30f9-4faa-8a79-d227a17631fe"><con:settings/><con:config><script>dtDate = new Date()
+def Y = new String()
+def M = new String()
+cal = Calendar.instance
+Y = cal.get(Calendar.YEAR)
+M = cal.get(Calendar.MONTH) + 1
+Day = cal.get(Calendar.DATE)
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = Y.toString() + M.toString() + Day.toString() + H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="groovy" name="TimeStamp" id="d54e7a81-6fd1-426b-8204-5102145fea01"><con:settings/><con:config><script>dtDate = new Date()
+
+cal = Calendar.instance
+H = cal.get(Calendar.HOUR_OF_DAY)
+min = cal.get(Calendar.MINUTE)
+s = cal.get(Calendar.SECOND)
+
+strStamp = H.toString() + min.toString() + s.toString()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="6fa122ec-ef03-4cd8-ab3d-790eb0f854e6"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>FirstName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>FirstName</con:sourceStep><con:targetType>FirstName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>LastName</con:name><con:sourceType>result</con:sourceType><con:sourceStep>LastName</con:sourceStep><con:targetType>LastName</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false"><con:name>DateTimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>DateTimeStamp</con:sourceStep><con:targetType>DateTimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>TimeStamp</con:name><con:sourceType>result</con:sourceType><con:sourceStep>TimeStamp</con:sourceStep><con:targetType>TimeStamp</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="7c44296f-3067-44a0-9784-73b862c9e871"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FirstName</con:name><con:value>John</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Shirley</con:value></con:property><con:property><con:name>DateTimeStamp</con:name><con:value>201634115736</con:value></con:property><con:property><con:name>TimeStamp</con:name><con:value>115736</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="18d1aca4-50a2-453f-909a-e366273f2676"><con:settings/><con:config service="https://st-coreplatform.apollogrp.edu" resourcePath="/servicegateway/rest/rm/v1/leadmanagement" methodName="Leadmanagement" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e58e3f52-88bb-459a-857e-94b928e34886" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="tenantid" value="831D8B107020BBEBE0400F0A32207789"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="x-apollo-assertion" value="eyJpdiI6ImRGZS82NDNaTStSRXI5QldTTCtpa2c9PSIsImVuY3J5cHRlZCI6IkhUOGxjTlN2ZDBXL1pURnBKZWtLb29nOHQxaHJRMkY0cHJiN3J1a1kvZExCaytEMUhMM3JsQkRZdm82bVRiQkVBWmUyNkxtQUFTMkZPYnVxRG4zUjg4QWdpcUJEemZVRC8rcDRSOVVhNGZiRDhQNjA4V21mSC9ZM3VhMm5MQ1VIY0NiUFpvMGtEKzQ1MDFpRmNZTVV4NDhhS3hRdW9JdEhJclVwQXkrOUpKOHRaeWM5RHRkUHpoYUFrRWxNbUdmOWRJaUd6MzlIblNXZFZDOVlRZEJ5MmxLa092OTQwbjJ1d2h4K1JMUS9TaUN6TDNnQnhNSy92NTJYK2tEems5azdLVHRrbEl6RloyRW5yUXdrb2l1dUI4K3FzOXdYTzBsRktFU3kwTDlRMm4ydHpTeDNhNGdSZm9xWmh0MUMyc3l4Ym52SjRkcmR0dWhlZHZvY29xVTJOak9sek9EenhwbnNlVytDKytPdW9ZWFhLTzVjZHBUVGZySTRPTTYzKzFsdzFiZzFZVXBCWjZMOHFsNDN4eEgzRmJ6NHVYVDYvcklVdlNlbHBjeEtwUEZpUkVRNkZjL3B4OE9oQzRBM0ZKQkh2UnN4S0ZyR3BvU090eWRRTG1QMStOM25YcHFHWTlPQU1jM1JqRGhma1lhWjg0TWN4Sk5iVHFLL0pSQWVsZVA0cHNEQ2FyeTJjaGgrcVpDdXRNU3owcWhxQlJZcDFkRHdkOVZSbjllMGZXM0lFbzdLa0RHdVl4NmMyMXFGcDRiVVZXdnh6dDlWMy9VMlNUNVluZC9JZ05GT2tpZ0RTZWVxV2drYXhFUWZJN0EzVTArMzd4Qi9nRzlJckZWb0dPb3RsRGkvQ1lzLzkvb1h3VWlWVHhDTDhHbE9mWDgxZU5ZdjJYYlJtdTJTZ0VZPSJ9"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://st-coreplatform.apollogrp.edu</con:endpoint><con:request>{
+    "rfi": {
+        "program": {
+            "academicAward":"Degree",
+            "academicAwardLevel":"Undergraduate", 
+            "code": "BSB",
+            "area": "Business and Management"
+        },
+
+        "campus": "Phoenix",
+        "campaign": "AD",
+        "source": "BANR",
+        "modality": "Online",
+        "foreignCredits": false,
+        "hasTCPAConsent": true,
+        "requestingIP": "127.0.0.1",
+        "requestingUrl": "www.lmsleadform.com"
+    },
+    "profile": {
+        "name": [{
+            "firstName": "${Properties#FirstName}",
+            "lastName": "${Properties#LastName}"
+        }],
+        "address": [{
+            "type": "Home",
+            "line1": "${Properties#TimeStamp} SOAP St",
+            "city": "Newberry",
+            "stateProvince": "DE",
+            "postalCode": "19901",
+            "country": "US"
+        }],
+        "emailAddress": [{
+            "type": "Business",
+            "emailAddress": "${Properties#FirstName}.${Properties#LastName}${Properties#DateTimeStamp}@testqaapollo.com"
+        }],
+        "phone": [{
+            "type": "Home",
+            "areaCode": "623",
+            "phoneNumber": "2016201",
+            "countryCode": "US"
+        }],
+        "citizenship": [{
+            "country": "US"
+        }]
+    },
+    "useCaseContext": "NEW",
+    "appContext": "INBOUNDMKT"
+}</con:request><con:originalUri>https://st-coreplatform.apollogrp.edu/servicegateway/rest/rm/v1/leadmanagement</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Apollo Assertion" id="813bc658-4e6f-4191-82fc-cf3820254b20" disabled="true"><con:settings/><con:config><script>import edu.apollogrp.test.client.cas.CasClient;
+import edu.apollogrp.test.client.sso.ApolloSsoClient;
+import edu.apollogrp.test.client.HttpsClientFactory;
+
+import javax.net.ssl.TrustManager;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import com.eviware.soapui.support.types.StringToStringMap
+//code for path
+import com.eviware.soapui.support.GroovyUtils
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+log.info( groovyUtils.projectPath )
+
+
+
+TrustManager[] trustManagers = HttpsClientFactory.createTautologicalTrustManagers();
+SSLSocketFactory sslSocketFactory = HttpsClientFactory.createHttpClientSslSocketFactory(null, trustManagers);
+
+CasClient casClient = new CasClient();
+casClient.setBaseUrl("https://cas2.qaols.phoenix.edu/cas");
+casClient.setSslSocketFactory(sslSocketFactory);
+
+
+ApolloSsoClient ssoClient = new ApolloSsoClient();
+ssoClient.setBaseUrl("https://sso.qaols.phoenix.edu/");
+ssoClient.setSslSocketFactory(sslSocketFactory);
+
+
+def username = "lggreer" //context.expand( '${DataSource_metis#StUsername}' )
+def password = "Welcome1" //context.expand( '${DataSource_metis#password}' )
+
+String casTGC = casClient.getTgtProgrammatically(username,password);
+System.out.println("CASTGC: " + casTGC);
+log.info("CASTGC: " + casTGC)
+
+String apolloAssertion = ssoClient.createAssertionExternal(casTGC, "https://portal.qaols.phoenix.edu");
+System.out.println("APOLLOASSERTION: " + apolloAssertion);
+//log.info("APOLLOASSERTION: " + apolloAssertion)
+
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = apolloAssertion.replaceFirst("D3%", "=");
+apolloAssertion = apolloAssertion.reverse();
+apolloAssertion = "APOLLOASSERTION=" +apolloAssertion
+                                                
+testRunner.testCase.setPropertyValue("Cookie", apolloAssertion );
+testRunner.testCase.getPropertyValue("Cookie");
+log.info("Cookie " + apolloAssertion)
+
+
+def headers = new StringToStringMap()
+headers.put("Cookie",apolloAssertion)
+testRunner.testCase.getTestStepByName("Request 1").testRequest.setRequestHeaders(headers)
+
+
+//code to parameterize teamname
+
+//def String randomValue = 5 + 5*Math.random()
+//randomValue="TEAMA"+randomValue
+//log.info(randomValue)
+//testRunner.testCase.testSuite.getProperty('TeamName').setValue(randomValue)
+//props.setPropertyValue("TeamName", String.valueOf(randomValue) );
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="a840e4ff-d413-402d-ab48-b07691243dae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ReEntry OSIRIS Payload" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="734e70f8-b850-48e2-8757-80dbba88c844"><con:settings/><con:config service="https://apollogrp--TEST.cs15.my.salesforce.com" resourcePath="/services/apexrest/SfRestRouter/v3/" methodName="V3" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="33ea5ff2-7284-4235-ae1c-8345f2dcbca1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="00De0000005VeBH!ARkAQOJMfIwN.k63whLO1c6yvhVe4_1pW3uSKc7SIbq3GcN3dnTG3ClDY7X24hP9HtJr2HU3y1W3mlkxmdLrhYNahCQprMms.bs"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://apollogrp--TEST.cs15.my.salesforce.com</con:endpoint><con:request>{
+  "SubjectId" : null,
+  "SourceSystem" : "OSIRIS",
+  "reqPayload" : {
+    "Degree_Level" : "Undergraduate",
+    "Credits_remaining" : "111",
+    "Version" : "024",
+    "Program" : "BSB/A",
+    "Campus" : "31",
+    "irn" : "9058404563"
+  },
+  "MessageVersion" : "1.0",
+  "MessageId" : "3b257e74-927c-4704-a5d6-693b27925f10",
+  "IsReprocessed" : false,
+  "EventType" : "REENTRY_STUDENT",
+  "CreationDateTime" : "2016-02-16T21:01:48.516-07:00"
+}
+</con:request><con:originalUri>https://apollogrp--TEST.cs15.my.salesforce.com/services/apexrest/SfRestRouter/v3/</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="REST Request2" id="235c386a-7709-4f88-9f4e-85d3d4259b2e"><con:settings/><con:config service="https://test.salesforce.com" resourcePath="/services/oauth2/token" methodName="Token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request2" id="fa17114a-6aa7-4efe-ba64-2a4a224e6338" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://test.salesforce.com</con:endpoint><con:request/><con:originalUri>https://test.salesforce.com/services/oauth2/token</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="username" value="qatester79@apollogrp.edu"/>
+  <con:entry key="client_secret" value="3986284512304774958"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="client_id" value="3MVG9dPGzpc3kWyfriwoTGFDbtSioJDBHXqJDeowIGIr2WS5Zp0J3ctqpYzWp7Ocp.5iILFeUKertS_qTVsHE"/>
+  <con:entry key="password" value="QAtest2011"/>
+</con:parameters><con:parameterOrder><con:entry>grant_type</con:entry><con:entry>client_id</con:entry><con:entry>client_secret</con:entry><con:entry>username</con:entry><con:entry>password</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/></con:soapui-project>
